@@ -1,0 +1,1249 @@
+.home,
+.home * {
+  box-sizing: border-box;
+}
+.home {
+  background: #73a8ce;
+  height: 5457px;
+  position: relative;
+  overflow: hidden;
+}
+.ceu-azul-1 {
+  width: 1920px;
+  height: 1056px;
+  position: absolute;
+  left: 0px;
+  top: 1969px;
+  object-fit: cover;
+  aspect-ratio: 1920/1056;
+}
+.ceu-azul-2 {
+  width: 2199px;
+  height: 1209px;
+  position: absolute;
+  left: -136px;
+  top: 4071px;
+  object-fit: cover;
+  aspect-ratio: 2199/1209;
+}
+.mulher-segurando-um-tablet-ao-lado-de-um-campo-agricola-1 {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 1919px;
+  height: 982px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 1919/982;
+}
+.rectangle-2 {
+  background: linear-gradient(
+    0deg,
+    rgba(115, 168, 206, 1) 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+  width: 1920px;
+  height: 982px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.abas {
+  position: absolute;
+  inset: 0;
+}
+.frame-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 682px;
+  position: absolute;
+  left: 320px;
+  top: 240px;
+}
+.irriga-o-com-monitoramento-inteligente {
+  color: #413027;
+  text-align: left;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 96px;
+  font-weight: 400;
+  position: relative;
+  width: 665px;
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-ut-dui-est-nulla-hendrerit-cursus-elit-ut-auctor-leo-vulputate-sit-amet-duis-eu-blandit-ante-et-aliquet-ipsum-fusce-luctus-et-libero-vel-vehicula-suspendisse-pellentesque-eget-sem-nec-maximus {
+  color: #413027;
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  position: relative;
+  width: 688px;
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-ut-dui-est-nulla-hendrerit-cursus-elit-ut-auctor-leo-vulputate-sit-amet-duis-eu-blandit-ante-et-aliquet-ipsum-fusce-luctus-et-libero-vel-vehicula-suspendisse-pellentesque-eget-sem-nec-maximus-span {
+  font-family: "InriaSans-Bold", sans-serif;
+  font-weight: 700;
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-ut-dui-est-nulla-hendrerit-cursus-elit-ut-auctor-leo-vulputate-sit-amet-duis-eu-blandit-ante-et-aliquet-ipsum-fusce-luctus-et-libero-vel-vehicula-suspendisse-pellentesque-eget-sem-nec-maximus-span2 {
+  font-family: "InriaSans-Regular", sans-serif;
+}
+.botao {
+  background: #413027;
+  border-radius: 80px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1.5px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 179px;
+  height: 63px;
+  position: relative;
+}
+.saiba-mais {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  position: relative;
+}
+.maki-arrow {
+  border-radius: 80px;
+  flex-shrink: 0;
+  width: 23px;
+  height: 23px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.login {
+  width: 485px;
+  height: 518px;
+  position: static;
+}
+.rectangle-3 {
+  background: rgba(217, 217, 217, 0.1);
+  border-radius: 40px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1.5px;
+  width: 485px;
+  height: 518px;
+  position: absolute;
+  left: 1115px;
+  top: 240px;
+  box-shadow: inset -33.43px 33.43px 33.43px 0px rgba(255, 255, 255, 0.1),
+    inset 33.43px -33.43px 33.43px 0px rgba(165, 165, 165, 0.1),
+    -4px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10.03px);
+}
+.login2 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  position: absolute;
+  left: 1299px;
+  top: 292px;
+}
+.group-1 {
+  width: 400px;
+  height: 195px;
+  position: static;
+}
+.rectangle-4 {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 400px;
+  height: 40px;
+  position: absolute;
+  left: 1158px;
+  top: 420px;
+}
+.rectangle-5 {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 400px;
+  height: 40px;
+  position: absolute;
+  left: 1158px;
+  top: 490px;
+}
+.rectangle-6 {
+  background: #1f5b2c;
+  border-radius: 12px;
+  width: 400px;
+  height: 50px;
+  position: absolute;
+  left: 1158px;
+  top: 565px;
+}
+.nome-de-usuario {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: left;
+  font-family: "InriaSans-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: 1173px;
+  top: 431px;
+}
+.sua-senha {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: left;
+  font-family: "InriaSans-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: 1173px;
+  top: 501px;
+}
+.esqueceu-sua-senha {
+  color: #000000;
+  text-align: left;
+  font-family: "InriaSans-Light", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  left: 1442px;
+  top: 532px;
+}
+.entrar {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  position: absolute;
+  left: 1313px;
+  top: 571px;
+}
+.aba-4 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-12 {
+  background: #413027;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1;
+  width: 1996px;
+  height: 1046px;
+  position: absolute;
+  left: -34px;
+  top: 3025px;
+}
+.rectangle-9 {
+  background: #2b201b;
+  border-radius: 25px;
+  width: 280px;
+  height: 278px;
+  position: absolute;
+  left: 877px;
+  top: 1469px;
+}
+.rectangle-11 {
+  border-radius: 0px;
+  width: 280px;
+  height: 278px;
+  position: absolute;
+  left: 1175px;
+  top: 1469px;
+  overflow: visible;
+}
+.aba-2 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-7 {
+  background: #413027;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1;
+  width: 1996px;
+  height: 1046px;
+  position: absolute;
+  left: -34px;
+  top: 923px;
+}
+.sobre {
+  width: 1017px;
+  height: 765px;
+  position: static;
+}
+.sobre-aquanox {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 96px;
+  letter-spacing: 0.3em;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 333px);
+  top: 982px;
+  width: 789px;
+  height: 79px;
+}
+.este-projeto-prop-e-o-desenvolvimento-de-um-sistema-inteligente-de-controle-e-monitoramento-de-irriga-o-com-suporte-multiplataforma-desktop-web-e-mobile-a-solu-o-realiza-o-manejo-autom-tico-da-irriga-o-fornecendo-a-quantidade-exata-de-gua-necess-ria-para-a-cultura-evitando-o-estresse-h-drico-das-plantas-e-o-desperd-cio-de-recursos-como-gua-e-energia-el-trica-al-m-disso-o-sistema-permite-o-acesso-remoto-via-internet-possibilitando-que-o-agricultor-acompanhe-o-funcionamento-da-irriga-o-de-qualquer-lugar-por-meio-de-um-computador-ou-dispositivo-m-vel-o-projeto-foi-desenvolvido-como-parte-de-uma-inicia-o-cient-fica-com-foco-em-inova-o-tecnol-gica-aplicada-ao-campo {
+  color: #ffffff;
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 450px;
+  top: 1161px;
+  width: 308px;
+}
+.este-projeto-prop-e-o-desenvolvimento-de-um-sistema-inteligente-de-controle-e-monitoramento-de-irriga-o-com-suporte-multiplataforma-desktop-web-e-mobile-a-solu-o-realiza-o-manejo-autom-tico-da-irriga-o-fornecendo-a-quantidade-exata-de-gua-necess-ria-para-a-cultura-evitando-o-estresse-h-drico-das-plantas-e-o-desperd-cio-de-recursos-como-gua-e-energia-el-trica-al-m-disso-o-sistema-permite-o-acesso-remoto-via-internet-possibilitando-que-o-agricultor-acompanhe-o-funcionamento-da-irriga-o-de-qualquer-lugar-por-meio-de-um-computador-ou-dispositivo-m-vel-o-projeto-foi-desenvolvido-como-parte-de-uma-inicia-o-cient-fica-com-foco-em-inova-o-tecnol-gica-aplicada-ao-campo-span {
+  font-family: "InriaSans-Light", sans-serif;
+  font-weight: 300;
+}
+.este-projeto-prop-e-o-desenvolvimento-de-um-sistema-inteligente-de-controle-e-monitoramento-de-irriga-o-com-suporte-multiplataforma-desktop-web-e-mobile-a-solu-o-realiza-o-manejo-autom-tico-da-irriga-o-fornecendo-a-quantidade-exata-de-gua-necess-ria-para-a-cultura-evitando-o-estresse-h-drico-das-plantas-e-o-desperd-cio-de-recursos-como-gua-e-energia-el-trica-al-m-disso-o-sistema-permite-o-acesso-remoto-via-internet-possibilitando-que-o-agricultor-acompanhe-o-funcionamento-da-irriga-o-de-qualquer-lugar-por-meio-de-um-computador-ou-dispositivo-m-vel-o-projeto-foi-desenvolvido-como-parte-de-uma-inicia-o-cient-fica-com-foco-em-inova-o-tecnol-gica-aplicada-ao-campo-span2 {
+  font-family: "InriaSans-Bold", sans-serif;
+  font-weight: 700;
+}
+.rectangle-8 {
+  background: #2b201b;
+  border-radius: 25px;
+  width: 280px;
+  height: 278px;
+  position: absolute;
+  left: 877px;
+  top: 1161px;
+}
+.rectangle-112 {
+  background: #2b201b;
+  border-radius: 25px;
+  width: 280px;
+  height: 278px;
+  position: absolute;
+  left: 877px;
+  top: 1469px;
+}
+.rectangle-10 {
+  background: #2b201b;
+  border-radius: 25px;
+  width: 280px;
+  height: 586px;
+  position: absolute;
+  left: 1187px;
+  top: 1161px;
+}
+._1-irrigacao-1 {
+  width: 1921px;
+  height: 1056px;
+  position: absolute;
+  left: 0px;
+  top: 1969px;
+  object-fit: cover;
+  aspect-ratio: 1921/1056;
+}
+.aba-3 {
+  position: absolute;
+  inset: 0;
+}
+.fun-es-do-aquanox {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 96px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 2108px;
+  width: 544px;
+  height: 81px;
+}
+.sol {
+  width: 923.61px;
+  height: 864px;
+  position: absolute;
+  left: 1303px;
+  top: 1935px;
+  overflow: visible;
+}
+._2 {
+  width: 1280px;
+  height: 100px;
+  position: absolute;
+  left: 320px;
+  top: 84px;
+}
+.rectangle-1 {
+  background: var(--color-1, #413027);
+  border-radius: 70px;
+  border-style: solid;
+  border-color: #413027;
+  border-width: 1px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+._11-removebg-preview-1 {
+  width: 11.77%;
+  height: 44px;
+  position: absolute;
+  right: 79.72%;
+  left: 8.52%;
+  top: 28px;
+  object-fit: cover;
+  aspect-ratio: 150.64/44;
+}
+.txt {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 27.81%;
+  height: 36%;
+  position: absolute;
+  right: 33.2%;
+  left: 38.98%;
+  bottom: 32%;
+  top: 32%;
+}
+.home2 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  position: relative;
+}
+.fun-es {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  position: relative;
+}
+.faq {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  position: relative;
+}
+.sobre2 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  position: relative;
+}
+.frame-3 {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 15.08%;
+  height: 40%;
+  position: absolute;
+  right: 9.84%;
+  left: 75.08%;
+  bottom: 32%;
+  top: 28%;
+}
+.codicon-account {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.frame-2 {
+  background: #1f5b2c;
+  border-radius: 50px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 131px;
+  position: relative;
+}
+.aplicativo-web {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  position: relative;
+}
+.sol2 {
+  width: 924px;
+  height: 529px;
+  position: absolute;
+  left: 994px;
+  top: 4105px;
+  overflow: visible;
+}
+.group-4 {
+  position: absolute;
+  inset: 0;
+}
+.frame-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 1280px;
+  position: absolute;
+  left: 320px;
+  top: 3512.06px;
+}
+.rectangle-16 {
+  background: #2b201b;
+  border-radius: 18.17px;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 77px;
+  position: relative;
+}
+.rectangle-17 {
+  background: #2b201b;
+  border-radius: 18.17px;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 77px;
+  position: relative;
+}
+.rectangle-18 {
+  background: #2b201b;
+  border-radius: 18.17px;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 77px;
+  position: relative;
+}
+.rectangle-19 {
+  background: #2b201b;
+  border-radius: 18.17px;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 77px;
+  position: relative;
+}
+.weui-arrow-filled {
+  flex-shrink: 0;
+  width: 24px;
+  height: 48px;
+  position: absolute;
+  left: 1244px;
+  top: 27px;
+  transform: translate(-48px, 0px);
+  overflow: visible;
+  aspect-ratio: 24/48;
+}
+.weui-arrow-filled2 {
+  flex-shrink: 0;
+  width: 23px;
+  height: 46px;
+  position: absolute;
+  left: 1242px;
+  top: 141px;
+  transform: translate(-46px, 0px);
+  overflow: visible;
+  aspect-ratio: 23/46;
+}
+.weui-arrow-filled3 {
+  flex-shrink: 0;
+  width: 23px;
+  height: 46px;
+  position: absolute;
+  left: 1242px;
+  top: 255px;
+  transform: translate(-46px, 0px);
+  overflow: visible;
+  aspect-ratio: 23/46;
+}
+.weui-arrow-filled4 {
+  flex-shrink: 0;
+  width: 23px;
+  height: 46px;
+  position: absolute;
+  left: 1242px;
+  top: 368px;
+  transform: translate(-46px, 0px);
+  overflow: visible;
+  aspect-ratio: 23/46;
+}
+.como-funciona-o-aquanox {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 30px;
+  line-height: 85.78%;
+  font-weight: 700;
+  position: absolute;
+  left: 37.25px;
+  top: 24.59px;
+  width: 386px;
+  height: 28px;
+}
+.como-funciona-o-aquanox2 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 30px;
+  line-height: 85.78%;
+  font-weight: 700;
+  position: absolute;
+  left: 37.25px;
+  top: 251.7px;
+  width: 386px;
+  height: 28px;
+}
+.como-funciona-o-aquanox3 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 30px;
+  line-height: 85.78%;
+  font-weight: 700;
+  position: absolute;
+  left: 37.25px;
+  top: 365.25px;
+  width: 386px;
+  height: 28px;
+}
+.como-funciona-o-aquanox4 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 30px;
+  line-height: 85.78%;
+  font-weight: 700;
+  position: absolute;
+  left: 37.25px;
+  top: 138.14px;
+  width: 386px;
+  height: 28px;
+}
+.faq2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Karantina-Bold", sans-serif;
+  font-size: 87.21046447753906px;
+  line-height: 85.78%;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  left: calc(50% - 635px);
+  top: 3121px;
+  width: 98px;
+  height: 74px;
+}
+.d-vidas-sobre-o-projeto {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 36px;
+  line-height: 85.78%;
+  font-weight: 700;
+  position: absolute;
+  left: calc(50% - 521px);
+  top: 3129px;
+  width: 231px;
+  height: 60px;
+}
+.component-1 {
+  width: 927px;
+  height: 77px;
+  position: absolute;
+  left: 320px;
+  top: 3291px;
+}
+.rectangle-162 {
+  background: #2b201b;
+  border-radius: 18.17px;
+  width: 138.08%;
+  height: 100%;
+  position: absolute;
+  right: -38.08%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.como-funciona-o-aquanox5 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 30px;
+  line-height: 85.78%;
+  font-weight: 700;
+  position: absolute;
+  right: 56.09%;
+  left: 5.72%;
+  width: 38.19%;
+  bottom: 33.77%;
+  top: 32.47%;
+  height: 33.77%;
+}
+.weui-arrow-filled5 {
+  width: 24px;
+  height: 48px;
+  position: absolute;
+  left: 1255px;
+  top: 26px;
+  transform-origin: 0 0;
+  transform: rotate(90deg) scale(1, 1);
+  overflow: hidden;
+  aspect-ratio: 24/48;
+}
+.vector {
+  width: 1.61%;
+  height: 31.32%;
+  position: absolute;
+  right: -35.62%;
+  left: 134.01%;
+  bottom: 25.51%;
+  top: 43.17%;
+  transform: translate(-24.11px, 0px);
+  overflow: visible;
+}
+.rodap {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-33 {
+  background: #413027;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 2px 0px 0px 0px;
+  width: 1920px;
+  height: 130px;
+  position: absolute;
+  left: 0px;
+  top: 5280px;
+}
+.rectangle-32 {
+  background: #2b201b;
+  width: 2123.73px;
+  height: 48px;
+  position: absolute;
+  left: -137px;
+  top: 5409px;
+}
+._2025-aquanox-todos-os-direitos-reservados {
+  color: #ffffff;
+  text-align: center;
+  font-family: "-", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 638px);
+  top: 5426px;
+}
+._2025-aquanox-todos-os-direitos-reservados-span {
+  font-family: "Inter-Regular", sans-serif;
+}
+._2025-aquanox-todos-os-direitos-reservados-span2 {
+  font-family: "Inter-Medium", sans-serif;
+  font-weight: 500;
+}
+._2025-aquanox-todos-os-direitos-reservados-span3 {
+  font-family: "Inter-Bold", sans-serif;
+  font-weight: 700;
+}
+.desenvolvida-por-turma-t-cnica-desenvolvimento-de-sistemas {
+  color: #ffffff;
+  text-align: center;
+  font-family: "-", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - -242px);
+  top: 5426px;
+}
+.desenvolvida-por-turma-t-cnica-desenvolvimento-de-sistemas-span {
+  font-family: "Inter-Regular", sans-serif;
+}
+.desenvolvida-por-turma-t-cnica-desenvolvimento-de-sistemas-span2 {
+  font-family: "Inter-Bold", sans-serif;
+  font-weight: 700;
+}
+.apoio {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 20.44508171081543px;
+  font-weight: 700;
+  position: absolute;
+  left: 320px;
+  top: 5305px;
+}
+.links {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 20.44508171081543px;
+  font-weight: 700;
+  position: absolute;
+  left: calc(50% - 258px);
+  top: 5305px;
+}
+.apoio2 {
+  background: #ffffff;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  gap: 3.26px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 320px;
+  top: 5335px;
+}
+.senai-logo-2024-1 {
+  border-radius: 3.74px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 0.65px;
+  flex-shrink: 0;
+  width: 149px;
+  height: 37.53px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 149/37.53;
+}
+.sesi-logo-2024-1 {
+  background: linear-gradient(to left, #ffffff, #ffffff);
+  border-radius: 3.74px;
+  width: 149px;
+  height: 38px;
+  position: absolute;
+  left: 482px;
+  top: 5335px;
+  object-fit: cover;
+  aspect-ratio: 149/38;
+}
+.contato {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 85.78%;
+  font-weight: 700;
+  position: absolute;
+  left: 1419px;
+  top: 5309px;
+  width: 74px;
+  height: 19px;
+}
+.baixe-o-app {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 85.78%;
+  font-weight: 700;
+  position: absolute;
+  left: 1230px;
+  top: 5309px;
+  width: 110px;
+  height: 19px;
+}
+.aquanox-contato-gmail-com-xx-xxxx-xxxx-endere-o-da-sede {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 13px;
+  line-height: 85.78%;
+  font-weight: 500;
+  position: absolute;
+  left: 1419px;
+  top: 5339px;
+  width: 183px;
+}
+.voltar-ao-inicio {
+  width: 94px;
+  height: 11.24px;
+  position: absolute;
+  left: 702px;
+  top: 5335px;
+}
+.voltar-ao-inicio2 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Regular", sans-serif;
+  font-size: 13.282608032226562px;
+  line-height: 85.78%;
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 2.13%;
+  top: 0%;
+  height: 97.87%;
+}
+.sobre3 {
+  width: 37.8px;
+  height: 11.24px;
+  position: absolute;
+  left: 702px;
+  top: 5356.46px;
+}
+.sobre4 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Regular", sans-serif;
+  font-size: 13.282608032226562px;
+  line-height: 85.78%;
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 2.13%;
+  top: 0%;
+  height: 97.87%;
+}
+.fun-es2 {
+  width: 54.15px;
+  height: 11.24px;
+  position: absolute;
+  left: 703.02px;
+  top: 5377.91px;
+}
+.fun-es3 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "InriaSans-Regular", sans-serif;
+  font-size: 13.282608032226562px;
+  line-height: 85.78%;
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 2.13%;
+  top: 0%;
+  height: 97.87%;
+}
+.unknown-2025-05-13-23-06-1 {
+  border-radius: 3px;
+  width: 60px;
+  height: 20px;
+  position: absolute;
+  left: 1232px;
+  top: 5334px;
+  object-fit: cover;
+  aspect-ratio: 60/20;
+}
+.unknown-2025-05-13-23-06-2 {
+  border-radius: 3px;
+  width: 60px;
+  height: 20px;
+  position: absolute;
+  left: 1232px;
+  top: 5357px;
+  object-fit: cover;
+  aspect-ratio: 60/20;
+}
+.sun-light {
+  width: 1920px;
+  height: 1209px;
+  position: absolute;
+  left: 0px;
+  top: 4071px;
+  object-fit: cover;
+}
+.sun-light2 {
+  width: 1920px;
+  height: 1056px;
+  position: absolute;
+  left: 0px;
+  top: 1969px;
+  object-fit: cover;
+}
+.email-botao {
+  background: #73a8ce;
+  border-radius: 80px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 2px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 514px;
+  height: 63px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 1847px;
+}
+.saiba-mais-em-aquanox-contato-gmail-com {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  position: relative;
+}
+.saiba-mais-em-aquanox-contato-gmail-com-span {
+}
+.saiba-mais-em-aquanox-contato-gmail-com-span2 {
+  text-decoration: underline;
+}
+.valvulas {
+  width: 673px;
+  height: 228px;
+  position: absolute;
+  left: 1600px;
+  top: 2329px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+}
+.rectangle-14 {
+  background: #1f5b2c;
+  border-radius: 20px 200px 20px 200px;
+  border-width: 1.5px;
+  border-style: solid;
+  border-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: -100%;
+  left: 100%;
+  bottom: 0%;
+  top: 0%;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+}
+.v-lvulas {
+  color: #ffffff;
+  text-align: center;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  position: absolute;
+  right: 9.06%;
+  left: 64.34%;
+  width: 26.6%;
+  bottom: 59.65%;
+  top: 16.67%;
+  height: 23.68%;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-ut-dui-est-nulla-hendrerit-cursus-elit-ut-auctor-leo-vulputate-sit-amet-duis-eu-blandit-ante-et-aliquet-ipsum-fusce-luctus-et-libero-vel-vehicula-suspendisse-pellentesque-eget-sem-nec-maximus2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "-", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  position: absolute;
+  right: -65.23%;
+  left: 88.41%;
+  width: 76.82%;
+  bottom: 17.11%;
+  top: 44.74%;
+  height: 38.16%;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-ut-dui-est-nulla-hendrerit-cursus-elit-ut-auctor-leo-vulputate-sit-amet-duis-eu-blandit-ante-et-aliquet-ipsum-fusce-luctus-et-libero-vel-vehicula-suspendisse-pellentesque-eget-sem-nec-maximus-2-span {
+  font-family: "InriaSans-Bold", sans-serif;
+  font-weight: 700;
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-ut-dui-est-nulla-hendrerit-cursus-elit-ut-auctor-leo-vulputate-sit-amet-duis-eu-blandit-ante-et-aliquet-ipsum-fusce-luctus-et-libero-vel-vehicula-suspendisse-pellentesque-eget-sem-nec-maximus-2-span2 {
+  font-family: "InriaSans-Regular", sans-serif;
+}
+.metereologica {
+  width: 673px;
+  height: 228px;
+  position: absolute;
+  left: 332px;
+  top: 2613px;
+}
+.esta-o-metereol-gica {
+  color: #ffffff;
+  text-align: center;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  position: absolute;
+  right: 15.45%;
+  left: 13.52%;
+  width: 71.03%;
+  bottom: 58.77%;
+  top: 15.79%;
+  height: 25.44%;
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-ut-dui-est-nulla-hendrerit-cursus-elit-ut-auctor-leo-vulputate-sit-amet-duis-eu-blandit-ante-et-aliquet-ipsum-fusce-luctus-et-libero-vel-vehicula-suspendisse-pellentesque-eget-sem-nec-maximus3 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "-", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  position: absolute;
+  right: 12.63%;
+  left: 10.55%;
+  width: 76.82%;
+  bottom: 15.79%;
+  top: 46.05%;
+  height: 38.16%;
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-ut-dui-est-nulla-hendrerit-cursus-elit-ut-auctor-leo-vulputate-sit-amet-duis-eu-blandit-ante-et-aliquet-ipsum-fusce-luctus-et-libero-vel-vehicula-suspendisse-pellentesque-eget-sem-nec-maximus-3-span {
+  font-family: "InriaSans-Bold", sans-serif;
+  font-weight: 700;
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-ut-dui-est-nulla-hendrerit-cursus-elit-ut-auctor-leo-vulputate-sit-amet-duis-eu-blandit-ante-et-aliquet-ipsum-fusce-luctus-et-libero-vel-vehicula-suspendisse-pellentesque-eget-sem-nec-maximus-3-span2 {
+  font-family: "InriaSans-Regular", sans-serif;
+}
+.qr-code {
+  width: 1280px;
+  height: 809px;
+  position: absolute;
+  left: 320px;
+  top: 4229px;
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-ut-dui-est-nulla-hendrerit-cursus-elit-ut-auctor-leo-vulputate-sit-amet-duis-eu-blandit-ante-et-aliquet-ipsum-fusce-luctus-et-libero-vel-vehicula-suspendisse-pellentesque-eget-sem-nec-maximus4 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "InriaSans-Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  right: 17.58%;
+  left: 17.58%;
+  width: 64.84%;
+  bottom: 4.2%;
+  top: 86.03%;
+  height: 9.77%;
+}
+.rectangle-21 {
+  border-radius: 50px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 2px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.baixe-o-aplicativo {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Karantina-Bold", sans-serif;
+  font-size: 87.21046447753906px;
+  line-height: 85.78%;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  right: 24.84%;
+  left: 24.84%;
+  width: 50.32%;
+  bottom: 77.06%;
+  top: 13.84%;
+  height: 9.1%;
+}
+.rectangle-30 {
+  background: #ffffff;
+  border-radius: 13.44px;
+  width: 21%;
+  height: 33.23%;
+  position: absolute;
+  right: 55.41%;
+  left: 23.59%;
+  bottom: 33.27%;
+  top: 33.5%;
+}
+.rectangle-31 {
+  background: #ffffff;
+  border-radius: 13.44px;
+  width: 21%;
+  height: 33.23%;
+  position: absolute;
+  right: 23.62%;
+  left: 55.38%;
+  bottom: 33.27%;
+  top: 33.5%;
+}
+.vaadin-qrcode {
+  width: 17.22%;
+  height: 220.43px;
+  position: absolute;
+  right: 57.31%;
+  left: 25.47%;
+  top: 295px;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.vaadin-qrcode2 {
+  width: 17.22%;
+  height: 220.43px;
+  position: absolute;
+  right: 25.53%;
+  left: 57.25%;
+  top: 295px;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.unknown-2025-05-13-23-06-22 {
+  border-radius: 12px;
+  width: 176px;
+  height: 57.26px;
+  position: absolute;
+  left: 755px;
+  top: 555px;
+  object-fit: cover;
+  aspect-ratio: 176/57.26;
+}
+.unknown-2025-05-13-23-06-12 {
+  border-radius: 12px;
+  width: 173.37px;
+  height: 57px;
+  position: absolute;
+  left: 346px;
+  top: 555px;
+  object-fit: cover;
+  aspect-ratio: 173.37/57;
+}
