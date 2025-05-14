@@ -9,11 +9,12 @@ body, html {
 .box {
   background: #6e6e6e;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 16px;
   width: 300px;
   margin: 80px auto;
   text-align: center;
   box-shadow: 0 0 10px #0003;
+  
 }
 .box h2 { margin-bottom: 20px; }
 .box input {
@@ -34,8 +35,39 @@ body, html {
   font-weight: bold;
   text-align: center;
 }
-.box button { background: #5df28a; color: #fff; cursor: pointer; }
-.box a { background: transparent; color: #ccc; font-size: 14px; }
+.box button {
+  background: linear-gradient(90deg, #4caf50, #81c784); /* Gradiente para o botão */
+  color: #fff;
+  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+  font-weight: bold;
+  padding: 15px 20px; /* Aumenta o tamanho do botão */
+  border: none;
+  border-radius: 12px; /* Bordas arredondadas */
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves */
+  display: block;
+  margin: 20px auto; /* Centraliza o botão horizontalmente */
+  text-align: center;
+  width: 80%; /* Ajusta a largura do botão */
+}
+
+.box button:hover {
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+.box a {
+  background: transparent;
+  color: #81c784;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.box a:hover {
+  color: #4caf50; /* Cor mais escura ao passar o mouse */
+}
+
 .aux-link { text-align: right; }
 .aux-link a { font-size: 12px; }
 .flash { list-style: none; padding: 0; margin: 0 0 10px; }

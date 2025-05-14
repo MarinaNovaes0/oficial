@@ -1,51 +1,102 @@
 /* Reset e Estilos Gerais */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
+
 
 body {
-  background-color: #f5f5f5;
-  color: #333;
+  background-image: url('img/fundo.png'); /* Define a imagem de fundo */
+  background-size: cover; /* Faz a imagem cobrir toda a tela */
+  background-position: top; /* Posiciona a imagem exatamente no topo */
+  background-attachment: fixed; /* Faz a imagem de fundo permanecer fixa */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  color: transparent;
   line-height: 1.6;
+  margin: 0; /* Remove margens para alinhar a imagem ao topo */
+  padding: 0;
+  position: relative; /* Adicionado para contexto de posicionamento */
+}
+
+/* Remove o deslocamento da imagem de fundo */
+body::before {
+  content: "";
+  background-image: url('img/fundo.png');
+  background-size: cover;
+  background-position: top; /* Posiciona a imagem exatamente no topo */
+  background-repeat: no-repeat;
+  position: fixed; /* Fixa a imagem para rolar com a página */
+  top: 0; /* Ajusta a posição para o topo */
+  left: 0;
+  right: 0;
+  height: 100vh; /* Altura total da viewport */
+  z-index: -1; /* Coloca atrás de todo conteúdo */
 }
 
 /* Header */
 header {
-  background-color: #afecff;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #402f26;
+  padding: 0.5rem 1.5rem; /* Aumenta o padding para deixar mais grosso */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 80px; /* Bordas arredondadas */
+  width: 68%; /* Reduz a largura do header */
+  margin: 0 auto; /* Centraliza o header horizontalmente */
+  position: absolute; /* Torna o header posicionado sobre a imagem */
+  top: 60px; /* Ajusta a posição do header */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Centraliza o header */
+  z-index: 10; /* Garante que o header fique acima da imagem de fundo */
 }
 
+.rectangle-2 {
+    background: linear-gradient(0deg, rgba(115, 168, 206, 1) 0%, rgba(217, 217, 217, 0) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: -72px;
+}
 .header-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Alinha o conteúdo do header mais para a esquerda */
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .logo {
-  height: 80px;
+  height: 50px; /* Diminui a altura da logo */
   width: auto;
+  margin-left: 50px;
+}
+
+.user-icon {
+  height: 50px; /* Define a altura da imagem */
+  width: auto; /* Mantém a proporção da imagem */
+  margin-left: 280px; /* Empurra a imagem para o lado direito */
+  cursor: pointer; /* Adiciona um cursor de ponteiro */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@400;700&display=swap'); /* Importa a fonte Karantina */
+
+@font-face {
+  font-family: 'Karantina-Regular';
+  src: url('fonts/Karantina-Regular.ttf') format('truetype'); /* Caminho para a fonte */
 }
 
 nav ul {
   display: flex;
   list-style: none;
   gap: 2rem;
+  justify-content: start; /* Alinha os itens à esquerda */
+  margin-left: 15rem; /* Adiciona margem à esquerda para movê-los um pouco para a direita */
+  padding-left: 0; /* Remove qualquer padding padrão */
 }
 
 nav ul li a {
-  color: black;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 40px; /* Aumenta o tamanho da fonte */
   transition: all 0.3s;
   padding: 0.5rem 1rem;
   border-radius: 4px;
+  font-family: 'Karantina-Regular' /* Aplica a fonte Karantina-Regular */
 }
 
 nav ul li a:hover {
@@ -54,55 +105,75 @@ nav ul li a:hover {
 }
 
 .banner-container {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
+  position: top;
+  width: 100%;
+  height: calc(100vh - 80px); /* Altura da viewport menos altura do header */
+  min-height: 500px;
+  margin-top: 0; /* Remove margem para colar no header */
 }
 
 .banner-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: relative;
 }
 
 .text-overlay {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 682px;
     position: absolute;
-    top: 50%;
-    left: 13%; /* Alterado de left para right */
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7); /* Reduzi a opacidade para 70% */
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    backdrop-filter: blur(2px); /* Efeito de desfoque sutil */
-    border: 1px solid rgba(255,255,255,0.2); /* Borda sutil */
-}
-
-
-.text-overlay h2 {
-  color: #2c3e50;
-  margin-bottom: 1rem;
+    left: 320px;
+    top: 240px;
 }
 
 .text-overlay p {
-  color: #333;
-  margin-bottom: 1.5rem;
+  color: #413027;
+  text-align: left;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 100px;
+  font-weight: 400;
+  position: relative;
+  width: 665px;
+  top: -100px;
+  line-height: 1; /* Reduz o espaçamento entre as linhas */
 }
 
+.text-overlay p + p {
+  color: #413027;
+    text-align: left;
+    font-family: "Inria Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+    width: 688px;
+    top: -220px;
+}
+
+
 .btn-saiba-mais {
-  background-color: #3498db;
-  color: white;
+  background: linear-gradient(90deg, #2196f3, #64b5f6); /* Gradiente para o botão */
+  color: #fff;
+  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+  font-weight: bold;
+  padding: 15px 20px; /* Aumenta o tamanho do botão */
   border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 4px;
+  border-radius: 12px; /* Bordas arredondadas */
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves */
+  display: block;
+  margin: 20px auto; /* Centraliza o botão horizontalmente */
+  text-align: center;
+  width: 80%; /* Ajusta a largura do botão */
 }
 
 .btn-saiba-mais:hover {
-  background-color: #2980b9;
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
 }
 
 .login-overlay {
@@ -119,7 +190,7 @@ nav ul li a:hover {
   backdrop-filter: blur(2px); /* Efeito de desfoque sutil */
   border: 1px solid rgba(255,255,255,0.2); /* Borda sutil */
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 16px; /* Aumentado para bordas mais arredondadas */
   width: 350px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
@@ -135,27 +206,29 @@ nav ul li a:hover {
   padding: 12px;
   margin-bottom: 1rem;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 40px;
   font-size: 1rem;
 }
 
 .login-box .btn-entrar {
-  width: 100%;
-  padding: 15px;
-  background-color: #3498db;
-  color: white;
+  background: linear-gradient(90deg, #4caf50, #81c784); /* Gradiente para o botão */
+  color: #fff;
+  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+  font-weight: bold;
+  padding: 15px 20px; /* Aumenta o tamanho do botão */
   border: none;
-  border-radius: 4px;
+  border-radius: 12px; /* Bordas arredondadas */
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+  transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves */
   display: block;
-  margin: 25px auto 0 auto; /* Adiciona margem superior para empurrar para baixo */
+  margin: 20px auto; /* Centraliza o botão horizontalmente */
   text-align: center;
+  width: 80%; /* Ajusta a largura do botão */
 }
 
 .login-box .btn-entrar:hover {
-  background-color: #2980b9;
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
 }
 
 .aux-link {
@@ -297,7 +370,7 @@ h2, h3 {
   backdrop-filter: blur(2px);
   border: 1px solid rgba(255,255,255,0.2);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 16px; /* Aumentado para bordas mais arredondadas */
   width: 350px;
   display: block; /* Certifique-se de que o formulário está visível */
   opacity: 0; /* Inicialmente invisível */
@@ -347,7 +420,7 @@ h2, h3 {
   backdrop-filter: blur(2px);
   border: 1px solid rgba(255,255,255,0.2);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 16px; /* Aumentado para bordas mais arredondadas */
   width: 350px;
   display: block;
   opacity: 1; /* Visível por padrão */
@@ -416,13 +489,15 @@ body, html {
 }
 
 .password-container input {
-  width: calc(100% - 40px); /* Ajusta largura para o botão */
+  width: 100%; /* O campo ocupa toda a largura */
+  padding-right: 40px; /* Espaço interno à direita para o botão */
+  word-break: break-all; /* Quebra o texto antes de ficar por baixo do botão */
 }
 
 .password-container .toggle-password {
   position: absolute;
   right: 10px;
-  top: 50%;
+  top: 36%;
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
@@ -432,4 +507,5 @@ body, html {
   background-size: contain;
   border: none;
   cursor: pointer;
+  z-index: 1; /* Garante que o botão fique acima do texto */
 }
