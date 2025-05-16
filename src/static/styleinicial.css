@@ -69,15 +69,26 @@ header {
 .user-icon {
   height: 50px; /* Define a altura da imagem */
   width: auto; /* Mantém a proporção da imagem */
-  margin-left: 280px; /* Empurra a imagem para o lado direito */
+  margin-left: 200px; /* Empurra a imagem para o lado direito */
   cursor: pointer; /* Adiciona um cursor de ponteiro */
 }
 
+/* Importação correta da fonte Inria Sans via link */
+@import url('https://fonts.googleapis.com/css?family=Inria+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karantina:wght@400;700&display=swap'); /* Importa a fonte Karantina */
 
+/* Importação local da fonte Inria Sans Bold da pasta static/fonts */
+@font-face {
+  font-family: 'Inria Sans Bold Local';
+  src: url('fonts/inria-sans.bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Remova os @font-face da Inria Sans */
 @font-face {
   font-family: 'Karantina-Regular';
-  src: url('fonts/Karantina-Regular.ttf') format('truetype'); /* Caminho para a fonte */
+  src: url('fonts/Karantina-Regular.ttf') format('truetype');
 }
 
 nav ul {
@@ -85,7 +96,7 @@ nav ul {
   list-style: none;
   gap: 2rem;
   justify-content: start; /* Alinha os itens à esquerda */
-  margin-left: 15rem; /* Adiciona margem à esquerda para movê-los um pouco para a direita */
+  margin-left: 10rem; /* Adiciona margem à esquerda para movê-los um pouco para a direita */
   padding-left: 0; /* Remove qualquer padding padrão */
 }
 
@@ -143,17 +154,6 @@ nav ul li a:hover {
   line-height: 1; /* Reduz o espaçamento entre as linhas */
 }
 
-.text-overlay p + p {
-  color: #413027;
-    text-align: left;
-    font-family: "Inria Sans", sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    position: relative;
-    width: 688px;
-    top: -220px;
-}
-
 
 .btn-saiba-mais {
   background: linear-gradient(90deg, #2196f3, #64b5f6); /* Gradiente para o botão */
@@ -196,9 +196,15 @@ nav ul li a:hover {
 }
 
 .login-box h2 {
-  color: #2c3e50;
+  font-size: 48px;
+  font-family: 'Inria Sans Bold Local', Arial, sans-serif; /* Usa apenas a fonte local para o h2 */
+  font-weight: bold;
+  color: white;
   margin-bottom: 1.5rem;
   text-align: center;
+  margin-top: 0; /* Remove qualquer margem superior padrão */
+  position: relative;
+  top: -5px; /* Move o título 30px para cima */
 }
 
 .login-box input {
@@ -221,9 +227,10 @@ nav ul li a:hover {
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves */
   display: block;
-  margin: 20px auto; /* Centraliza o botão horizontalmente */
+  margin: 0px; /* Centraliza o botão horizontalmente */
   text-align: center;
-  width: 80%; /* Ajusta a largura do botão */
+  width: 360px; /* Ajusta a largura do botão */
+  height: 50px;
 }
 
 .login-box .btn-entrar:hover {
@@ -237,7 +244,7 @@ nav ul li a:hover {
 }
 
 .aux-link a {
-  color: #3498db;
+  color: black;
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -383,20 +390,21 @@ h2, h3 {
 }
 
 #loginForm {
-  position: absolute;
-  top: 30%; /* Alterado para 30% para subir mais o formulário */
-  right: 13%; /* Mesma posição horizontal */
-  transform: translateY(-100%);
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  backdrop-filter: blur(2px);
-  border: 1px solid rgba(255,255,255,0.2);
-  padding: 2rem;
-  border-radius: 8px;
-  width: 350px;
-  display: block;
-  opacity: 1; /* Visível por padrão */
-  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out; /* Transição mais suave */
+  background: rgba(217, 217, 217, 0.1);
+  border-radius: 40px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1.5px;
+  box-shadow: inset -33.43px 33.43px 33.43px 0px rgba(255, 255, 255, 0.1), 
+              inset 33.43px -33.43px 33.43px 0px rgba(165, 165, 165, 0.1), 
+              -4px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10.03px);
+  width: 420px;
+  height: 480px;
+  max-width: 90vw;
+  margin: 0 auto;
+  position: relative;
+  top: -68px;
 }
 
 #loginForm.hide {
