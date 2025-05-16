@@ -3,21 +3,21 @@
 
 body {
   background-image: url('img/fundo.png'); /* Define a imagem de fundo */
-  background-size: cover; /* Faz a imagem cobrir toda a tela */
-  background-position: top; /* Posiciona a imagem exatamente no topo */
-  background-attachment: fixed; /* Faz a imagem de fundo permanecer fixa */
-  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: transparent;
   line-height: 1.6;
-  margin: 0; /* Remove margens para alinhar a imagem ao topo */
+  margin: 0;
   padding: 0;
-  position: relative; /* Adicionado para contexto de posicionamento */
+  position: relative;
 }
 
 /* Remove o deslocamento da imagem de fundo */
+
 body::before {
   content: "";
-  background-image: url('img/fundo.png');
   background-size: cover;
   background-position: top; /* Posiciona a imagem exatamente no topo */
   background-repeat: no-repeat;
@@ -28,6 +28,7 @@ body::before {
   height: 100vh; /* Altura total da viewport */
   z-index: -1; /* Coloca atrás de todo conteúdo */
 }
+
 
 /* Header */
 header {
@@ -82,6 +83,21 @@ header {
   font-family: 'Inria Sans Bold Local';
   src: url('fonts/inria-sans.bold.ttf') format('truetype');
   font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inria Sans Light Local';
+  src: url('fonts/inria-sans.light.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+/* Importação local das variantes da Inria Sans */
+@font-face {
+  font-family: 'Inria Sans Regular Local';
+  src: url('fonts/inria-sans.regular.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -150,32 +166,170 @@ nav ul li a:hover {
   font-weight: 400;
   position: relative;
   width: 665px;
-  top: -100px;
+  top: -140px;
   line-height: 1; /* Reduz o espaçamento entre as linhas */
 }
 
 
 .btn-saiba-mais {
-  background: linear-gradient(90deg, #2196f3, #64b5f6); /* Gradiente para o botão */
-  color: #fff;
-  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
-  font-weight: bold;
-  padding: 15px 20px; /* Aumenta o tamanho do botão */
-  border: none;
-  border-radius: 12px; /* Bordas arredondadas */
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves */
+  background: #413027;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 40px;
+  color: white;
+  border-radius: 80px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1.5px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 179px;
+  height: 63px;
+  position: relative;
+  transition: 
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.maki-arrow {
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: 23px;
+  height: 23px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+  background: white; /* círculo branco por padrão */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+/* Para o SVG dentro do .maki-arrow */
+.maki-arrow svg {
+  width: 22px;
+  height: 22px;
   display: block;
-  margin: 20px auto; /* Centraliza o botão horizontalmente */
-  text-align: center;
-  width: 80%; /* Ajusta a largura do botão */
+  fill: #413027; /* seta marrom por padrão */
+  transition: fill 0.2s;
 }
 
-.btn-saiba-mais:hover {
-  transform: scale(1.05); /* Leve aumento ao passar o mouse */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+/* Hover e Focus: fundo branco, círculo marrom, seta branca, borda marrom */
+.btn-saiba-mais:hover,
+.btn-saiba-mais:focus,
+.btn-saiba-mais:active {
+  background: white;
+  color: #413027;
+  border-color: #413027;
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  outline: none;
 }
 
+.btn-saiba-mais:hover .maki-arrow,
+.btn-saiba-mais:focus .maki-arrow,
+.btn-saiba-mais:active .maki-arrow {
+  background: #413027 !important; /* círculo marrom */
+}
+
+.btn-saiba-mais:hover .maki-arrow svg,
+.btn-saiba-mais:focus .maki-arrow svg,
+.btn-saiba-mais:active .maki-arrow svg {
+  fill: #fff !important; /* seta branca */
+}
+
+.btn-saiba-mais:hover,
+.btn-saiba-mais:hover * {
+  color: #413027 !important;
+}
+
+.saiba-mais-container {
+  position: absolute;
+  top: 700px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+
+.saiba-mais-email {
+  color: #fff;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 32px;
+  margin-bottom: 24px;
+  letter-spacing: 0.04em;
+  text-align: start;
+}
+
+.btn-saiba-mais-rectangle7 {
+  background: #73A8CE;
+  top: 370px;
+  left: 30px;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 40px;
+  color: white;
+  border-radius: 80px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1.5px;
+  padding: 8px 48px;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 550px;
+  height: 63px;
+  position: relative;
+  transition: 
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.btn-saiba-mais-rectangle7 .maki-arrow {
+  display: none;
+}
+
+.btn-saiba-mais-rectangle7:hover,
+.btn-saiba-mais-rectangle7:focus,
+.btn-saiba-mais-rectangle7:active {
+  background: white;
+  color: #73A8CE;
+  border-color: #73A8CE;
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.btn-saiba-mais-rectangle7:hover .maki-arrow,
+.btn-saiba-mais-rectangle7:focus .maki-arrow,
+.btn-saiba-mais-rectangle7:active .maki-arrow {
+  background:#73A8CE  !important;
+}
+
+.btn-saiba-mais-rectangle7:hover .maki-arrow svg,
+.btn-saiba-mais-rectangle7:focus .maki-arrow svg,
+.btn-saiba-mais-rectangle7:active .maki-arrow svg {
+  fill: #fff !important;
+}
+
+.btn-saiba-mais-rectangle7:hover,
+.btn-saiba-mais-rectangle7:hover * {
+  color: #73A8CE !important;
+}
+
+/* ...existing code... */
 .login-overlay {
   position: absolute;
   top: 85%;
@@ -277,96 +431,110 @@ main {
   padding: 0 2rem;
 }
 
-section {
-  margin-bottom: 3rem;
+
+/* Seção Login e Recuperação */
+.login-overlay {
+  position: absolute;
+  top: 85%;
+  right: 13%;
+  transform: translateY(-50%);
+}
+
+.login-box {
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7); /* Reduzi a opacidade para 70% */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  backdrop-filter: blur(2px); /* Efeito de desfoque sutil */
+  border: 1px solid rgba(255,255,255,0.2); /* Borda sutil */
   padding: 2rem;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 16px; /* Aumentado para bordas mais arredondadas */
+  width: 350px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-h2, h3 {
-  color: #2c3e50;
-  margin-bottom: 1.5rem;
-}
-
-
-/* Seção Funções */
-.funcao-item {
-  margin-top: 1.5rem;
-}
-
-/* Seção Download */
-.download-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.btn-appstore, .btn-playstore {
-  padding: 0.8rem 1.8rem;
-  border: none;
-  border-radius: 4px;
+.login-box h2 {
+  font-size: 48px;
+  font-family: 'Inria Sans Bold Local', Arial, sans-serif; /* Usa apenas a fonte local para o h2 */
   font-weight: bold;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: transform 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.btn-appstore {
-  background-color: #000;
   color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-top: 0; /* Remove qualquer margem superior padrão */
+  position: relative;
+  top: -5px; /* Move o título 30px para cima */
 }
 
-.btn-playstore {
-  background-color: #0f9d58;
-  color: white;
-}
-
-.btn-appstore:hover, .btn-playstore:hover {
-  transform: translateY(-3px);
-}
-
-/* Seção FAQ */
-.faq-list {
-  list-style-position: inside;
-  margin-top: 1.5rem;
-}
-
-.faq-list li {
+.login-box input {
+  width: 100%;
+  padding: 12px;
   margin-bottom: 1rem;
-  padding-left: 0.5rem;
-  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  font-size: 1rem;
+}
+
+.login-box .btn-entrar {
+  background: linear-gradient(90deg, #4caf50, #81c784); /* Gradiente para o botão */
+  color: #fff;
+  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+  font-weight: bold;
+  padding: 15px 20px; /* Aumenta o tamanho do botão */
+  border: none;
+  border-radius: 12px; /* Bordas arredondadas */
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves */
+  display: block;
+  margin: 0px; /* Centraliza o botão horizontalmente */
+  text-align: center;
+  width: 360px; /* Ajusta a largura do botão */
+  height: 50px;
+}
+
+.login-box .btn-entrar:hover {
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+.aux-link {
+  text-align: right;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.aux-link a {
+  color: black;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.aux-link a:hover {
+  text-decoration: underline;
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    gap: 1rem;
+@media (max-width: 900px) {
+  .text-overlay,
+  .login-overlay {
+      position: static;
+      transform: none;
+      max-width: 100%;
+      width: 100%;
+      margin: 1rem 0;
   }
   
-  nav ul {
-    gap: 1rem;
-  }
-  
-  .hero-text {
-    margin: 2rem;
-    padding: 1.5rem;
-    max-width: 100%;
-  }
-  
-  .download-buttons {
-    flex-direction: column;
-    gap: 1rem;
+  .banner-container {
+      height: auto;
+      padding: 1rem;
   }
 }
 
-/* Estilos para o formulário de recuperação */
+/* Conteúdo Principal */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* Seção Login e Recuperação */
 #forgotPasswordForm {
   position: absolute;
   top: 35%; /* Alterado para 35% para subir mais o formulário */
@@ -517,3 +685,126 @@ body, html {
   cursor: pointer;
   z-index: 1; /* Garante que o botão fique acima do texto */
 }
+
+.descricao-inria {
+  margin-top: -180px; /* Move a caixa de texto para cima */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 665px;
+}
+
+.inria-bold {
+  font-family: 'Inria Sans Bold Local', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #413027;
+  display: block;
+  margin-top: -70px;
+  
+}
+
+
+.inria-regular {
+  font-family: 'Inria Sans Regular Local', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  color: #413027;
+  display: block;
+  margin-top: 4px;
+  line-height: 1.5;
+  margin-top: -10px;
+}
+
+.rectangle-7 {
+  background: #413027;
+  width: 1939px;
+  height: 1500px;
+  position: absolute;
+  left: -34px;
+  top: 858px;
+  z-index: 1;
+}
+
+.rectangle-8 {
+  background: #73A8CE;
+  width: 1939px;
+  height: 100%;
+  position: absolute;
+  left: -34px;
+  top: 2100px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.img-irrigacao-rectangle8 {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.sobre-aquanox {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 96px;
+  letter-spacing: 0.9px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 333px);
+  top: 40px;
+  width: 789px;
+  height: 79px;
+  z-index: 2;
+}
+
+.texto-sobre-aquanox {
+  position: absolute;
+  top: 300px;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Inria Sans Light Local", sans-serif;
+  text-align: left;
+  line-height: 1.4;
+  z-index: 2;
+  position: absolute;
+  left: 450px;
+  width: 308px;
+
+}
+
+.funcoes-aquanox {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Karantina-Regular", sans-serif;
+  font-size: 96px;
+  letter-spacing: 0.9px;
+  font-weight: 400;
+  position: absolute;
+  left: 770px;
+  top: 40px;
+  height: 79px;
+  z-index: 2;
+}
+
+.rectangle-14 {
+  background: #1f5b2c;
+  border-radius: 20px 200px 20px 200px;
+  border-width: 1.5px;
+  border-style: solid;
+  border-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  border-image-slice: 1;
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: none;
+  z-index: 3;
+}
+
