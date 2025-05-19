@@ -70,7 +70,7 @@ header {
 .user-icon {
   height: 50px; /* Define a altura da imagem */
   width: auto; /* Mantém a proporção da imagem */
-  margin-left: 200px; /* Empurra a imagem para o lado direito */
+  margin-left: 300px; /* Empurra a imagem para o lado direito */
   cursor: pointer; /* Adiciona um cursor de ponteiro */
 }
 
@@ -107,12 +107,17 @@ header {
   src: url('fonts/Karantina-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Karantina-Bold';
+  src: url('fonts/Karantina-Bold.ttf') format('truetype');
+}
+
 nav ul {
   display: flex;
   list-style: none;
   gap: 2rem;
   justify-content: start; /* Alinha os itens à esquerda */
-  margin-left: 10rem; /* Adiciona margem à esquerda para movê-los um pouco para a direita */
+  margin-left: 15rem; /* Adiciona margem à esquerda para movê-los um pouco para a direita */
   padding-left: 0; /* Remove qualquer padding padrão */
 }
 
@@ -793,18 +798,423 @@ body, html {
 }
 
 .rectangle-14 {
-  background: #1f5b2c;
+  background: linear-gradient(135deg, #2ecc71 0%, #1f5b2c 100%);
   border-radius: 20px 200px 20px 200px;
-  border-width: 1.5px;
-  border-style: solid;
-  border-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  border-image-slice: 1;
-  width: 10%;
-  height: 10%;
+  border-width: 0;
+  border-style: none;
+  border-image: none;
+  width: 690px;
+  height: 228px;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 990px;
+  top: 300px;
   transform: none;
   z-index: 3;
+  transition: 
+    transform 0.7s cubic-bezier(.4,1.5,.5,1),
+    box-shadow 0.7s,
+    background 0.4s;
+  cursor: pointer;
+}
+
+.rectangle-14-invertida {
+  background: linear-gradient(135deg, #2ecc71 0%, #1f5b2c 100%);
+  border-radius: 200px 20px 200px 20px;
+  border-width: 0;
+  border-style: none;
+  border-image: none;
+  width: 690px;
+  height: 228px;
+  position: absolute;
+  left: 300px;
+  top: 500px;
+  transform: none;
+  z-index: 3;
+  transition: 
+    transform 1.2s cubic-bezier(.4,1.5,.5,1),
+    box-shadow 1.2s,
+    background 0.6s;
+  cursor: pointer;
+}
+
+.rectangle-14,
+.rectangle-14-invertida {
+  background: linear-gradient(135deg, #2ecc71 0%, #1f5b2c 100%);
+}
+
+.rectangle-14.hover,
+.rectangle-14-invertida.hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.22);
+  background: linear-gradient(315deg, #2ecc71 0%, #1f5b2c 100%);
+  z-index: 4;
+}
+
+.rectangle-14-content {
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  right: 40px;
+  color: #fff;
+  z-index: 4;
+  width: 590px;
+  height: calc(100% - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.rectangle-14-content h2 {  
+  font-family: 'Inria Sans Bold Local', Arial, sans-serif; /* Usa apenas a fonte local para o h2 */
+  font-size: 48px;
+  margin: 0px 200px;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.rectangle-14-content p {
+  font-family: "Inria Sans Regular Local", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  margin: -5px 0px 0px 30px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.rectangle-14-content-invertida {
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  right: 40px;
+  color: #fff;
+  z-index: 4;
+  width: 590px;
+  height: calc(100% - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.rectangle-14-content-invertida h2 {  
+  font-family: 'Inria Sans Bold Local', Arial, sans-serif;
+  font-size: 48px;
+  margin: 0px 60px;
+  color: #fff;
+  letter-spacing: 0.05em;
+  width: 700px;
+
+}
+
+.rectangle-14-content-invertida p {
+  font-family: "Inria Sans Regular Local", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  margin: -5px 0px 0px 10px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.rectangle-9 {
+  background: #413027;
+  width: 1939px;
+  height: 1500px;
+  position: absolute;
+  left: -34px;
+  top: 3030px; /* Ajuste conforme necessário para ficar logo abaixo do .rectangle-8 */
+  z-index: 1;
+}
+
+/* FAQ e dúvidas posicionados no início do .rectangle-9 */
+.faq2 {
+    color: #ffffff;
+    text-align: center;
+    font-family: "Karantina-Bold", sans-serif;
+    font-size: 89px;
+    line-height: 85.78%;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    left: 430px;
+    top: 90px;
+    width: 98px;
+    height: 74px;
+}
+.d-vidas-sobre-o-projeto {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Inria Sans Bold Local", sans-serif;
+    font-size: 36px;
+    line-height: 85.78%;
+    font-weight: 700;
+    position: absolute;
+    left: 550px;
+    top: 100px;
+    width: 250px;
+    height: 60px;
+}
+
+.rectangle-162 {
+    background: #2b201b;
+    border-radius: 18.17px;
+    width: 1280px;
+    height: 77px;
+    position: relative;
+    left: 425px;
+    bottom: 0%;
+    top: 250px;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.rectangle-162-text {
+    color: #fff;
+    font-family: "Inria Sans Bold Local", Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+.seta {
+  height: 30px;
+  width: auto;
+  margin-left: auto;
+  display: block;
+  transition: transform 0.7s cubic-bezier(.4,1.5,.5,1);
+}
+
+.seta.girada {
+  transform: rotate(180deg);
+}
+
+.caixa-expansivel {
+  background: #6d4c37;
+  border-radius: 0 0 18.17px 18.17px;
+  width: 1280px;
+  min-height: 180px;
+  position: absolute;
+  left: 0;
+  top: 77px; /* exatamente abaixo do rectangle-162 */
+  margin-top: 0;
+  z-index: 1;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: 
+    opacity 1.2s cubic-bezier(.4,1.5,.5,1),
+    max-height 1.2s cubic-bezier(.4,1.5,.5,1),
+    padding 1.2s cubic-bezier(.4,1.5,.5,1);
+  box-sizing: border-box;
+  padding: 0 48px;
+  display: block;
+}
+
+.caixa-expansivel.show {
+  opacity: 1;
+  max-height: 400px;
+  padding: 32px 48px;
+}
+
+.rectangle-9 {
+  background: #413027;
+  width: 1939px;
+  height: 1500px;
+  position: absolute;
+  left: -34px;
+  top: 3030px; /* Ajuste conforme necessário para ficar logo abaixo do .rectangle-8 */
+  z-index: 1;
+  /* contexto de posicionamento para .caixa-expansivel */
+}
+
+.caixa-expansivel-text {
+  color: #fff;
+  font-family: "Inria Sans Regular Local", Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.img-show {
+  background: #73A8CE;
+  width: 1939px;
+  height: 120%;
+  position: absolute;
+  left: -34px;
+  top: 4000px;
+  z-index: 1;
+}
+
+.img-aaa {
+  background: transparent;
+  width: 1200px;
+  height: 800px;
+  position: absolute;
+  left: 370px;
+  top: 4100px;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+
+.img-logo-below-aaa {
+  background: transparent;
+  width: 150px;
+  height: 40px;
+  position: absolute;
+  left: 910px;
+  top: 4990px;
+  z-index: 3;
+  display: block;
+}
+
+.img-fim {
+  background: transparent;
+  width: 1905px;
+  height: 179px;
+  position: absolute;
+  left: 0px;
+  top: 5100px;
+  z-index: 4;
+  display: block;
+}
+
+.fim-links {
+  position: absolute;
+  top: 5110px;
+  left: 750px;
+  transform: none;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: none;
+  border-radius: 0;
+  padding: revert-layer;
+  box-shadow: none;
+  align-items: flex-start;
+}
+
+
+.fim-link {
+  color: #fff;
+  font-family: "Inria Sans Regular Local", Arial, sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 2px 1px;
+  border-radius: 12px;
+  background: none;
+  transition: color 0.2s;
+  letter-spacing: 1px;
+  box-shadow: none;
+  margin-top: 0;
+  border: none;
+  display: block;
+  text-align: left;
+}
+
+.fim-link:hover {
+  color: #73A8CE;
+  background: none;
+  transform: none;
+}
+
+/* Adições do aaa.css que não estavam em styleinicial.css */
+
+/* Importação local da fonte Nexa Heavy */
+@font-face {
+  font-family: 'Nexa-Heavy';
+  src: url('fonts/Nexa-Heavy.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Seção Funções */
+section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.funcao-item {
+  margin-top: 1.5rem;
+}
+
+.funcao-item h3 {
+  font-family: 'Karantina-Bold', 'Karantina-Regular', cursive, sans-serif;
+  font-weight: bold;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* Para os textos das válvulas e meteorologia */
+.funcao-item p {
+  font-family: 'Nexa-Heavy', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Seção Download */
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.btn-appstore, .btn-playstore {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-appstore {
+  background-color: #000;
+  color: white;
+}
+
+.btn-playstore {
+  background-color: #0f9d58;
+  color: white;
+}
+
+.btn-appstore:hover, .btn-playstore:hover {
+  transform: translateY(-3px);
+}
+
+/* Seção FAQ */
+.faq-list {
+  list-style-position: inside;
+  margin-top: 1.5rem;
+}
+
+.faq-list li {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  font-size: 1.1rem;
 }
 

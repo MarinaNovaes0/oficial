@@ -46,3 +46,6 @@ def forgot():
     return render_template('forgot.html')
 
 
+@app.route('/app', methods=['GET'])
+def app_page():
+    return render_template('app.html')

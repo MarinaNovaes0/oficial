@@ -1,17 +1,46 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Navegação suave para as seções
+  // Navegação suave para as seções do header
   document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-          
-          const targetId = this.getAttribute('href');
-          const targetElement = document.querySelector(targetId);
-          
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#sobre') {
+        e.preventDefault();
+        const sobreSection = document.querySelector('.rectangle-7');
+        if (sobreSection) {
           window.scrollTo({
-              top: targetElement.offsetTop - 20,
-              behavior: 'smooth'
+            top: sobreSection.offsetTop - 20,
+            behavior: 'smooth'
           });
-      });
+        }
+      } else if (href === '#funcoes') {
+        e.preventDefault();
+        const funcoesSection = document.querySelector('.rectangle-8');
+        if (funcoesSection) {
+          window.scrollTo({
+            top: funcoesSection.offsetTop - 20,
+            behavior: 'smooth'
+          });
+        }
+      } else if (href === '#faq') {
+        e.preventDefault();
+        const faqSection = document.querySelector('.rectangle-9');
+        if (faqSection) {
+          window.scrollTo({
+            top: faqSection.offsetTop - 20,
+            behavior: 'smooth'
+          });
+        }
+      } else if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 20,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
   });
 
   const loginForm = document.getElementById('loginForm');
@@ -119,8 +148,15 @@ document.addEventListener('DOMContentLoaded', function() {
                       setTimeout(() => {
                           forgotPasswordContainer.style.display = 'none';
                           mainLoginForm.style.display = 'block';
-                          mainLoginForm.classList.remove('hide'); // Garante estado inicial
-                          setTimeout(() => mainLoginForm.classList.add('show'), 10); // Mostra com animação
+                          mainLoginForm.classList.remove('hide', 'show', 'from-forgot');
+                          // Adiciona animação de retorno: começa em -25%
+                          mainLoginForm.classList.add('from-forgot');
+                          // Força reflow para garantir a transição
+                          void mainLoginForm.offsetWidth;
+                          // Agora anima para -50%
+                          mainLoginForm.classList.add('show');
+                          // Remove from-forgot após a animação
+                          setTimeout(() => mainLoginForm.classList.remove('from-forgot'), 600);
                       }, 600); // Tempo ajustado para a transição terminar
                   });
               })
@@ -149,5 +185,91 @@ document.addEventListener('DOMContentLoaded', function() {
       togglePassword.style.backgroundSize = 'contain';
       togglePassword.style.border = 'none';
       togglePassword.style.cursor = 'pointer';
+  }
+
+  // Animação dos rectangles verdes com gradiente fluido via JS
+  function addRectangleHoverAnimation(selector) {
+    document.querySelectorAll(selector).forEach(function(rect) {
+      rect.addEventListener('mouseenter', function() {
+        rect.classList.add('hover');
+        rect.style.transition = 'transform 0.7s cubic-bezier(.4,1.5,.5,1), box-shadow 0.7s, background 0.4s, background-position 1s';
+        rect.style.background = 'linear-gradient(315deg, #2ecc71 0%, #1f5b2c 100%)';
+        rect.style.backgroundSize = '200% 200%';
+        rect.style.backgroundPosition = '100% 50%';
+      });
+      rect.addEventListener('mouseleave', function() {
+        rect.classList.remove('hover');
+        rect.style.transition = 'transform 0.7s cubic-bezier(.4,1.5,.5,1), box-shadow 0.7s, background 0.4s, background-position 1s';
+        rect.style.background = 'linear-gradient(135deg, #2ecc71 0%, #1f5b2c 100%)';
+        rect.style.backgroundSize = '200% 200%';
+        rect.style.backgroundPosition = '0% 50%';
+      });
+    });
+  }
+  addRectangleHoverAnimation('.rectangle-14');
+  addRectangleHoverAnimation('.rectangle-14-invertida');
+
+  // Expansão da caixa ao clicar na seta
+  const seta = document.getElementById('abrirExpansivel');
+  const caixa = document.getElementById('caixaExpansivel');
+  if (seta && caixa) {
+    seta.addEventListener('click', function() {
+      caixa.classList.toggle('show');
+      seta.classList.toggle('girada');
+    });
+  }
+
+  // Voltar ao início ao clicar no link da caixa sobre fim.png
+  const voltarInicio = document.getElementById('voltar-inicio');
+  if (voltarInicio) {
+    voltarInicio.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Navegação suave para "Sobre" no fim-link
+  const fimSobre = document.querySelector('.fim-link[href="#sobre"]');
+  if (fimSobre) {
+    fimSobre.addEventListener('click', function(e) {
+      e.preventDefault();
+      const sobreSection = document.querySelector('.rectangle-7');
+      if (sobreSection) {
+        window.scrollTo({
+          top: sobreSection.offsetTop - 20,
+          behavior: 'smooth'
+        });
+      }
+    });
+  }
+
+  // Navegação suave para "Funções" no fim-link
+  const fimFuncoes = document.querySelector('.fim-link[href="#funcoes"]');
+  if (fimFuncoes) {
+    fimFuncoes.addEventListener('click', function(e) {
+      e.preventDefault();
+      const funcoesSection = document.querySelector('.rectangle-8');
+      if (funcoesSection) {
+        window.scrollTo({
+          top: funcoesSection.offsetTop - 20,
+          behavior: 'smooth'
+        });
+      }
+    });
+  }
+
+  // Navegação suave para "Faq" no fim-link
+  const fimFaq = document.querySelector('.fim-link[href="#faq"]');
+  if (fimFaq) {
+    fimFaq.addEventListener('click', function(e) {
+      e.preventDefault();
+      const faqSection = document.querySelector('.rectangle-9');
+      if (faqSection) {
+        window.scrollTo({
+          top: faqSection.offsetTop - 20,
+          behavior: 'smooth'
+        });
+      }
+    });
   }
 });
