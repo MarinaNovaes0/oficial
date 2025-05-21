@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Redefinir Senha</title>
+  <link rel="stylesheet" href="static/styleinicial.css">
+  <script src="static/reset.js" defer></script>
+</head>
+<body>
+  <div class="sent-box show" id="sentResetBox">
+    <h2>Redefinir Senha</h2>
+    <p>Você solicitou a redefinição de senha.<br>Clique abaixo para criar uma nova senha.</p>
+    <button type="button" class="btn-entrar" id="btnNovaSenha">Criar nova senha</button>
+  </div>
+  <div class="sent-box" id="novaSenhaBox" style="display:none;">
+    <h2>Criar Nova Senha</h2>
+    <form method="POST" action="/reset">
+      <input type="password" name="new_password" placeholder="Nova senha" required>
+      <input type="password" name="confirm_password" placeholder="Confirme a nova senha" required>
+      <button type="submit" class="btn-entrar">Salvar</button>
+    </form>
+    <a href="index.html" style="margin-top:30px;">Voltar ao início</a>
+  </div>
+</body>
+</html>
