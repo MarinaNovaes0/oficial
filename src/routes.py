@@ -31,10 +31,17 @@ def desligar():
     return '', 204
 
 
-@app.route('/forgot.html', methods=['GET'])
+@app.route('/forgot', methods=['GET'])
 def forgot():
     return render_template('forgot.html')
 
+@app.route('/resetar_senha', methods=['GET'])
+def reset():
+    return render_template('resetar_senha.html')
+
+@app.route('/sent', methods=['GET'])
+def sent():
+    return render_template('sent.html')
 
 @app.route('/app', methods=['GET'])
 def app_page():

@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     mainLoginForm.classList.add('hide');
     setTimeout(() => {
         mainLoginForm.style.display = 'none';
-        fetch('/forgot.html')
+        fetch('/forgot')
             .then(response => {
                 if (!response.ok) throw new Error('Erro ao carregar o formulário de recuperação.');
                 return response.text();
@@ -122,21 +122,50 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Remove o formulário de recuperação
                         forgotPasswordForm.classList.remove('show');
                         setTimeout(() => {
-                            forgotPasswordContainer.innerHTML = `
-                              <div class="sent-box show" id="sentBox">
-                                <h2>Enviado!</h2>
-                                <p>Verifique seu email para mais informações.</p>
-                                <a href="#" id="backToLoginFromSent">Voltar ao login</a>
-                              </div>
-                            `;
-                            // Evento para voltar ao login a partir da caixa sent
-                            const backToLoginFromSent = document.getElementById('backToLoginFromSent');
-                            if (backToLoginFromSent) {
-                                backToLoginFromSent.addEventListener('click', function(e) {
-                                    e.preventDefault();
-                                    const sentBox = document.getElementById('sentBox');
-                                    if (sentBox) sentBox.classList.remove('show');
-                                    setTimeout(() => {
+                            // Carrega sent.html via fetch e exibe na mesma área
+                            fetch('/sent')
+                              .then(response => {
+                                if (!response.ok) throw new Error('Erro ao carregar a confirmação de envio.');
+                                return response.text();
+                              })
+                              .then(html => {
+                                forgotPasswordContainer.innerHTML = html;
+                                forgotPasswordContainer.style.display = 'block';
+                                // Animação da sent-box igual ao forgot
+                                setTimeout(() => {
+                                  const sentBox = document.getElementById('sentBox');
+                                  if (sentBox) sentBox.classList.add('show');
+                                  // Evento para "Nova senha" abre resetar_senha.html via fetch
+                                  const novaSenhaLink = document.getElementById('novaSenhaLink');
+                                  if (novaSenhaLink) {
+                                    novaSenhaLink.addEventListener('click', function(e) {
+                                      e.preventDefault();
+                                      sentBox.classList.remove('show');
+                                      setTimeout(() => {
+                                        fetch('/resetar_senha')
+                                          .then(response => {
+                                            if (!response.ok) throw new Error('Erro ao carregar a redefinição de senha.');
+                                            return response.text();
+                                          })
+                                          .then(html => {
+                                            forgotPasswordContainer.innerHTML = html;
+                                            forgotPasswordContainer.style.display = 'block';
+                                            setTimeout(() => {
+                                              const novaSenhaBox = document.getElementById('sentResetBox') || document.getElementById('novaSenhaBox');
+                                              if (novaSenhaBox) novaSenhaBox.classList.add('show');
+                                            }, 10);
+                                          })
+                                          .catch(err => alert(err.message));
+                                      }, 600);
+                                    });
+                                  }
+                                  // Evento para voltar ao login a partir da caixa sent
+                                  const backToLoginFromSent = document.getElementById('backToLoginFromSent');
+                                  if (backToLoginFromSent) {
+                                    backToLoginFromSent.addEventListener('click', function(e) {
+                                      e.preventDefault();
+                                      sentBox.classList.remove('show');
+                                      setTimeout(() => {
                                         forgotPasswordContainer.style.display = 'none';
                                         mainLoginForm.style.display = 'block';
                                         mainLoginForm.classList.remove('hide', 'show', 'from-forgot');
@@ -144,9 +173,12 @@ document.addEventListener('DOMContentLoaded', function() {
                                         void mainLoginForm.offsetWidth;
                                         mainLoginForm.classList.add('show');
                                         setTimeout(() => mainLoginForm.classList.remove('from-forgot'), 600);
-                                    }, 600);
-                                });
-                            }
+                                      }, 600);
+                                    });
+                                  }
+                                }, 10);
+                              })
+                              .catch(err => alert(err.message));
                         }, 600);
                     });
                 }

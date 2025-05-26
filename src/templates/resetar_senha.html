@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Nova senha</title>
+  <link rel="stylesheet" href="static/styleinicial.css">
+  <script src="static/resetar_senha.js" defer></script>
+</head>
+<body>
+  <div class="reset-container">
+    <h2 class="reset-title">Nova senha</h2>
+    <form class="reset-form" method="POST" action="/resetar_senha" autocomplete="off">
+      <div class="reset-password-container">
+        <input type="password" id="reset-password" name="reset-password" class="reset-password" placeholder="Nova senha" required autocomplete="new-password">
+        <button type="button" class="reset-toggle-password" aria-label="Mostrar/ocultar senha"></button>
+      </div>
+      <div class="reset-password-container">
+        <input type="password" id="reset-password-confirm" name="reset-password-confirm" class="reset-password" placeholder="Confirmar senha" required autocomplete="new-password">
+        <button type="button" class="reset-toggle-password" aria-label="Mostrar/ocultar senha"></button>
+      </div>
+      <button type="submit" class="reset-btn">Atualizar senha</button>
+    </form>
+  </div>
+</body>
+</html>

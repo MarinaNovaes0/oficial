@@ -6,10 +6,21 @@
   <link rel="stylesheet" href="static/styleinicial.css">
 </head>
 <body>
-  <div class="sent-box show" id="sentBox">
+  <div class="sent-box" id="sentBox">
     <h2>Enviado!</h2>
     <p>Verifique seu e-mail para ver as instruções para recuperar sua senha..</p>
-    <a href="reset.html">Redefinir senha</a>
+    <div class="aux-link">
+      <a href="#" id="backToLoginFromSent" class="link-voltar-login">Voltar ao login</a>
+    </div>
+    <div class="aux-link">
+      <a href="resetar_senha.html" id="novaSenhaLink">Redefinir senha</a>
+    </div>
   </div>
+  <script>
+    // Adiciona a classe 'show' após o carregamento da página para disparar a animação
+    window.onload = function() {
+      document.getElementById('sentBox').classList.add('show');
+    }
+  </script>
 </body>
 </html>

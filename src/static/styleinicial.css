@@ -506,7 +506,7 @@ main {
   text-align: center;
   margin-top: 0;
   position: relative;
-  top: -30px;
+  top: -10px;
   opacity: 50%;
 }
 .login-box input {
@@ -1362,35 +1362,44 @@ div#forgotPasswordForm.show {
 
 #forgotPasswordForm h2,
 .login-box.forgot-password-container h2 {
-  font-size: 48px;
-  font-family: 'Inria Sans Bold Local', Arial, sans-serif;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 1.5rem;
+ font-size: 48px;
+ font-family: 'Inria Sans Bold Local', Arial, sans-serif;
+ font-weight: bold;
+ color: white;
+ text-align: center;
+ margin-top: 0;
+ position: relative;
+ margin-bottom: 10px;
+ top: 10px;
+}
+
+#forgotPasswordForm p,
+.login-box.forgot-password-container p {
+  font-size: 18px;
+  font-family: 'Inria Sans Regular Local', Arial, sans-serif;
+  color: black;
+  margin-bottom: 0px;
   text-align: center;
   margin-top: 0;
   position: relative;
-  top: -5px;
+  top: -30px;
+  opacity: 50%;
 }
 
-#forgotPasswordForm .aux-link,
-.login-box.forgot-password-container .aux-link {
-  text-align: center;
-  margin-top: 1rem;
-}
 
-#forgotPasswordForm .aux-link a,
-.login-box.forgot-password-container .aux-link a {
+#forgotPasswordForm a,
+.login-box.forgot-password-container a {
   color: black;
   opacity: 70%;
   font-size: 1rem;
   cursor: pointer;
-  display: inline-block;
-  margin-top: 20px;
+  display: flex;
+  margin-top: 40px;
+  margin-left: 120px;
 }
 
-#forgotPasswordForm .aux-link a:hover,
-.login-box.forgot-password-container .aux-link a:hover {
+#forgotPasswordForm a:hover,
+.login-box.forgot-password-container a:hover {
   opacity: 50%;
   cursor: pointer;
   text-decoration: underline;
@@ -1461,8 +1470,8 @@ div#forgotPasswordForm.show {
  text-align: center;
  margin-top: 0;
  position: relative;
- margin-bottom: 200px;
- top: 160px;
+ margin-bottom: 160px;
+ top: 90px;
 }
 
 #sentBox p,
@@ -1511,10 +1520,9 @@ div#forgotPasswordForm.show {
     top: auto;
   }
 }
-
-/* Caixa de redefinição de senha (novaSenhaBox) - igual sent-box */
-#novaSenhaBox,
-.nova-senha-box {
+  
+/* RESET NOVO - fundo e animação igual ao forgot */
+.reset-container {
   background: rgba(217, 217, 217, 0.1);
   border-radius: 40px;
   border-style: solid;
@@ -1522,61 +1530,103 @@ div#forgotPasswordForm.show {
   border-width: 1.5px;
   width: 420px;
   height: 480px;
+  max-width: 90vw;
+  margin: 0 auto;
   position: relative;
+  top: 10%; /* Mais para cima */
+  right: 13%;
+  left: auto;
   box-shadow: inset -33.43px 33.43px 33.43px 0px rgba(255, 255, 255, 0.1),
     inset 33.43px -33.43px 33.43px 0px rgba(165, 165, 165, 0.1),
     -4px 8px 20px 0px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10.03px);
-  top: 25%;
-  right: 13%;
-  left: auto;
-  transform: translateY(20%);
-  opacity: 0;
   display: block;
   z-index: 200;
   transition: opacity 0.6s cubic-bezier(.4,1.5,.5,1), transform 0.6s cubic-bezier(.4,1.5,.5,1);
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 160%;
 }
 
-#novaSenhaBox.show,
-.nova-senha-box.show {
+.reset-container.show {
   opacity: 1;
-  transform: translateY(-68%);
+  transform: translateY(-100%);
   transition: opacity 0.6s cubic-bezier(.4,1.5,.5,1), transform 0.6s cubic-bezier(.4,1.5,.5,1);
 }
 
-#novaSenhaBox.hide,
-.nova-senha-box.hide {
+.reset-container.hide {
   opacity: 0;
   transform: translateY(10%);
-  transition: opacity 0.6s cubic-bezier(.4,1.5,.5,1), transform 0.6s cubic-bezier(.4,1.5,.5,1);
   pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(.4,1.5,.5,1), transform 0.6s cubic-bezier(.4,1.5,.5,1);
 }
 
-#novaSenhaBox h2,
-.nova-senha-box h2 {
-  font-size: 48px;
+.reset-title {
   font-family: 'Inria Sans Bold Local', Arial, sans-serif;
-  font-weight: bold;
-  color: white;
+  font-size: 2.5rem;
+  color: #fff;
   text-align: center;
+  margin-bottom: 36px;
   margin-top: 0;
-  margin-bottom: 40px;
-  position: relative;
-  top: 0;
+  font-weight: bold;
+  letter-spacing: 0.02em;
 }
 
-#novaSenhaBox input,
-.nova-senha-box input {
+.reset-form {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 
-#novaSenhaBox .btn-entrar,
-.nova-senha-box .btn-entrar {
+.reset-password-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.reset-password {
+  width: 100%;
+  padding: 14px 44px 14px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #fff;
+  font-size: 1.15rem;
+  color: #413027;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+  outline: none;
+  font-family: 'Inria Sans Regular Local', Arial, sans-serif;
+  margin-bottom: 0;
+  transition: box-shadow 0.2s;
+}
+
+.reset-password:focus {
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
+}
+
+.reset-toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-image: url('/static/img/olhoa.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px 26px;
+  transition: background-image 0.2s;
+  z-index: 2;
+  padding: 0;
+}
+
+.reset-btn {
   background: linear-gradient(90deg, #4caf50, #81c784);
   color: #fff;
   font-size: 1.2rem;
@@ -1587,33 +1637,27 @@ div#forgotPasswordForm.show {
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   display: block;
-  margin: 0 auto;
+  margin: 0px;
   text-align: center;
-  width: 100%;
+  width: 350px;
   height: 50px;
+  margin-top: 30px;
 }
 
-#novaSenhaBox .btn-entrar:hover,
-.nova-senha-box .btn-entrar:hover {
+.reset-btn:hover,
+.reset-btn:focus {
   transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#novaSenhaBox a,
-.nova-senha-box a {
-  color: black;
-  opacity: 70%;
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  margin-top: 40px;
-  margin-left: 155px;
-  text-decoration: underline;
-}
-
-#novaSenhaBox a:hover,
-.nova-senha-box a:hover {
-  opacity: 50%;
-  cursor: pointer;
-  text-decoration: underline;
+/* Responsivo */
+@media (max-width: 600px) {
+  .reset-container {
+    width: 98vw;
+    min-width: 0;
+    padding: 24px 4vw;
+  }
+  .reset-title {
+    font-size: 2rem;
+  }
 }
