@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="static/css/styleconfig.css"/>
+        <title>Configurações - Aquanox</title>
+    </head>
+    <body>
+        <div class="config-app">
+            <div class="config-banner">
+                <img class="config-logo" src="static/img/logo.png" />
+            </div>
+            <div class="user-info-bar">Informações do Usuário</div>
+            <div class="config-header">
+                <!-- Exibe informações do usuário logado no lugar do ícone -->
+                <div class="config-user-info">
+                    <div class="config-user-info-item">
+                        <span class="config-user-info-label">Nome:</span>
+                        <span class="config-user-info-value">{{ usuario_nome }}</span>
+                    </div>
+                    <div class="config-user-info-item">
+                        <span class="config-user-info-label">E-mail:</span>
+                        <span class="config-user-info-value">{{ usuario_email }}</span>
+                    </div>
+                    <div class="config-user-info-item">
+                        <span class="config-user-info-label">Senha:</span>
+                        <span class="config-user-info-value">{{ usuario_senha }}</span>
+                    </div>
+                </div>
+                <!-- ...existing code for .config-user-account no-box (remova ou mantenha apenas se necessário) ... -->
+            </div>
+            <div class="config-title-bar">
+                <div class="config-title-main">Configurações</div>
+            </div>
+            <div class="config-container">
+                <h2 class="config-title">Configurações do Usuário</h2>
+                <p class="config-desc">
+                    Aqui você poderá alterar suas preferências, redefinir senha, editar dados do perfil e outras opções em breve.
+                </p>
+                <button class="config-btn">Salvar Alterações</button>
+            </div>
+        </div>
+    </body>
+</html>

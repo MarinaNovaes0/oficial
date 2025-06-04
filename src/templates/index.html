@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Aquanox - Controle de Irrigação Inteligente</title>
-    <link rel="stylesheet" href="static/styleinicial.css">
+    <link rel="stylesheet" href="static/css/styleinicial.css">
     <script>
       // Bloqueia zoom por teclado e gestos
       document.addEventListener('keydown', function(e) {
@@ -77,15 +77,45 @@
   <img src="static/img/fundo2.png" alt="Irrigação" class="img-irrigacao-rectangle8" />
   <div class="funcoes-aquanox">FUNÇÕES DO AQUANOX</div>
 </div>
+
 <div class="rectangle-9">
   <div class="faq2">FAQ</div>
   <div class="d-vidas-sobre-o-projeto">Dúvidas sobre o projeto</div>
-  <div class="rectangle-162">
-    <span class="rectangle-162-text">Como funciona o Aquanox?</span>
-    <img src="static/img/seta.svg" alt="Seta" class="seta" id="abrirExpansivel">
-    <div class="caixa-expansivel" id="caixaExpansivel">
-      <div class="caixa-expansivel-text">
-        O Aquanox funciona monitorando e controlando automaticamente a irrigação, utilizando sensores e algoritmos inteligentes para fornecer a quantidade ideal de água para as plantas, evitando desperdícios e otimizando recursos.
+  <div class="faq-list-expandiveis">
+  <div class="rectangle-162 rectangle-162-1" style="margin-top: 10px;">
+      <span class="rectangle-162-text">De que forma o aplicativo auxilia no planejamento do manejo agrícola, além da irrigação?</span>
+      <img src="static/img/seta.svg" alt="Seta" class="seta" id="abrirExpansivel1">
+      <div class="caixa-expansivel caixa-expansivel-1" id="caixaExpansivel1">
+        <div class="caixa-expansivel-text">
+          Além de monitorar a irrigação, o aplicativo conta com a seção de “Manejo”, que registra todas as práticas agrícolas realizadas ou programadas, como adubação, controle de pragas e preparo do solo. Cada registro inclui informações sobre a data, o responsável e a área em que a atividade foi ou será executada. Isso permite ao produtor ter um histórico organizado das operações no campo, facilitando o planejamento, o acompanhamento e a tomada de decisões mais assertivas para manter a produtividade e a sustentabilidade da propriedade.
+        </div>
+      </div>
+    </div>
+    <div class="rectangle-162 rectangle-162-2" style="margin-top: 10px;">
+      <span class="rectangle-162-text">Qual é a importância da irrigação agrícola, e como o aplicativo contribui para esse processo?</span>
+      <img src="static/img/seta.svg" alt="Seta" class="seta" id="abrirExpansivel2">
+      <div class="caixa-expansivel caixa-expansivel-2" id="caixaExpansivel2">
+        <div class="caixa-expansivel-text">
+          A irrigação agrícola é fundamental para garantir a produtividade e a sustentabilidade nas atividades rurais, especialmente em locais onde há irregularidade nas chuvas. O aplicativo desenvolvido busca justamente atender a essa demanda, oferecendo uma interface mobile que permite o registro e o acompanhamento de todas as atividades relacionadas à irrigação. Ao proporcionar informações em tempo real, ele ajuda no uso eficiente da água, no planejamento das ações e no monitoramento remoto das operações, alinhando-se aos avanços tecnológicos aplicados ao campo.
+        </div>
+      </div>
+    </div>
+    <div class="rectangle-162 rectangle-162-3" style="margin-top: 10px;">
+      <span class="rectangle-162-text">De que forma o aplicativo utiliza a tecnologia da informação para otimizar a irrigação?</span>
+      <img src="static/img/seta.svg" alt="Seta" class="seta" id="abrirExpansivel3">
+      <div class="caixa-expansivel caixa-expansivel-3" id="caixaExpansivel3">
+        <div class="caixa-expansivel-text">
+          O aplicativo foi projetado com foco na gestão inteligente da irrigação, utilizando ferramentas digitais para centralizar dados sobre válvulas, estações meteorológicas, turnos de rega e práticas de manejo. Isso permite que o produtor rural acompanhe, de forma prática e rápida, tudo o que está acontecendo na propriedade, mesmo à distância. Embora a interface não permita o controle direto de dispositivos, ela oferece informações precisas que apoiam decisões mais sustentáveis e eficientes, promovendo economia de água e melhoria na produtividade.
+        </div>
+      </div>
+    </div>
+    <div class="rectangle-162 rectangle-162-4" style="margin-top: 10px;">
+      <span class="rectangle-162-text">De que maneira a seção “Válvulas” do aplicativo auxilia no monitoramento da irrigação?</span>
+      <img src="static/img/seta.svg" alt="Seta" class="seta" id="abrirExpansivel4">
+      <div class="caixa-expansivel caixa-expansivel-4" id="caixaExpansivel4">
+        <div class="caixa-expansivel-text">
+         A seção “Válvulas” oferece ao usuário uma visão completa sobre o status das válvulas presentes no sistema de irrigação, indicando se estão ligadas ou desligadas e a qual área ou horta estão associadas. Além disso, é possível visualizar graficamente a disposição das válvulas no sistema, o que facilita o entendimento da distribuição da água na propriedade. Existe ainda a opção de atualizar as informações para verificar o último status registrado, embora o aplicativo, nesta versão, não permita que o usuário atue diretamente no controle das válvulas.
+        </div>
       </div>
     </div>
   </div>
@@ -127,7 +157,6 @@
           <!-- Login Form (visible by default) -->
           <div class="login-box" id="loginForm">
               <h2>Login</h2>
-              <form method="POST" action="/welcome"> <!-- Corrigido para usar a rota correta -->
                   <input type="text" name="username" placeholder="Nome de Usuário" required>
                   <div class="password-container">
                       <input type="password" name="password" placeholder="Senha" required>
@@ -142,9 +171,54 @@
           
           <!-- Placeholder para carregar o formulário de recuperação -->
           <div id="forgotPasswordContainer" style="display: none;"></div>
-      </div>
-      
+</div>
 
-    <script src="static/script.js"></script>
+<!-- Modal de confirmação de cadastro -->
+<div id="cadastroConfirmModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:9999; align-items:center; justify-content:center;">
+  <div style="background:#fff; border-radius:16px; padding:40px 32px; min-width:320px; max-width:90vw; margin:120px auto; box-shadow:0 2px 16px #0003; text-align:center;">
+    <h2 style="font-size:2rem; color:#436177; margin-bottom:16px;">Cadastro realizado com sucesso!</h2>
+    <p style="font-size:1.1rem; color:#222; margin-bottom:32px;">Seu cadastro foi concluído. Clique em "Ir para o painel" para acessar o sistema.</p>
+    <button id="btnIrPainel" style="background:#73A8CE; color:#fff; font-size:1.1rem; font-family:'Nexa-Heavy',sans-serif; border:none; border-radius:8px; padding:12px 32px; cursor:pointer;">Ir para o painel</button>
+  </div>
+</div>
+
+<!-- Botão flutuante para voltar ao topo -->
+<button id="btnVoltarTopo" title="Voltar ao início">
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+    <circle cx="20" cy="20" r="18" />
+    <path d="M20 13L20 27" stroke-width="3" stroke-linecap="round"/>
+    <path d="M14 19L20 13L26 19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script>
+  // Exemplo: ao clicar em "Entrar", mostra modal de confirmação e redireciona após confirmação
+  document.addEventListener('DOMContentLoaded', function() {
+    const btnEntrar = document.querySelector('.btn-entrar');
+    if (btnEntrar) {
+      btnEntrar.addEventListener('click', function(e) {
+        e.preventDefault();
+        const username = document.querySelector('input[name="username"]').value.trim();
+        const password = document.querySelector('input[name="password"]').value.trim();
+        if (!username || !password) {
+          alert('Por favor, preencha todos os campos!');
+          return;
+        }
+        // Mostra modal de confirmação
+        document.getElementById('cadastroConfirmModal').style.display = 'flex';
+        document.getElementById('btnIrPainel').onclick = function() {
+          window.location.href = '/painel_admin';
+        };
+      });
+    }
+
+    // Lógica para o botão "Voltar ao topo"
+    const btnVoltarTopo = document.getElementById('btnVoltarTopo');
+    btnVoltarTopo.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
 </body>
 </html>

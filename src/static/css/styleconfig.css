@@ -1,0 +1,192 @@
+/* Estilos globais removidos para foco nas configurações */
+@font-face {
+  font-family: 'InriaSans-Regular';
+  src: url('/static/fonts/inria-sans.regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'InriaSans-Bold';
+  src: url('/static/fonts/inria-sans.bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karantina-Regular';
+  src: url('/static/fonts/Karantina-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Karantina-Bold';
+  src: url('/static/fonts/Karantina-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.config-app {
+  background: #73a8ce;
+  height: 100vh;
+  min-height: 900px;
+  position: relative;
+  overflow: hidden;
+}
+
+.config-logo {
+  width: 150.64px;
+  height: 44px;
+  position: absolute;
+  left: 1626px;
+  top: 102px;
+  object-fit: cover;
+  aspect-ratio: 150.64/44;
+}
+
+.config-header {
+  display: flex;
+  flex-direction: row;
+  gap: 38.5px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 150px;
+  top: 89px;
+}
+
+.config-user-icon {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+
+.config-user-greeting {
+  color: #ffffff;
+  text-align: left;
+  font-size: 40px;
+  font-weight: 400;
+  position: absolute;
+  left: 237px;
+  top: 100px;
+}
+
+.config-user-greeting-span {
+  font-family: "InriaSans-Regular", sans-serif;
+}
+.config-user-greeting-span2 {
+  font-family: "InriaSans-Bold", sans-serif;
+  font-weight: 700;
+}
+
+.config-title-bar {
+  background: rgba(67, 97, 119, 0.5);
+  padding: 10px 1451px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 1920px;
+  position: absolute;
+  left: 0px;
+  top: 420px;
+  overflow: hidden;
+}
+
+.config-title-main {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Karantina-Bold', 'Karantina', cursive, sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.config-container {
+  position: absolute;
+  left: 50%;
+  top: 600px;
+  transform: translateX(-50%);
+  width: 800px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 16px #0001;
+  padding: 48px 64px;
+  text-align: center;
+}
+
+.config-title {
+  font-family: 'Karantina-Bold', cursive, sans-serif;
+  font-size: 2.5rem;
+  color: #436177;
+  margin-bottom: 24px;
+}
+
+.config-desc {
+  font-family: 'InriaSans-Regular', Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 32px;
+}
+
+.config-btn {
+  background: #73A8CE;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: 'Nexa-Heavy', sans-serif;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.config-btn:hover,
+.config-btn:focus {
+  background: #436177;
+}
+
+.config-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 350px;
+  height: 180px;
+  background: none;
+  z-index: 2;
+  padding: 24px 0 0 0;
+}
+
+.config-user-info-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.35rem;
+  color: #fff;
+  font-family: 'InriaSans-Regular', Arial, sans-serif;
+}
+
+.config-user-info-label {
+  font-weight: bold;
+  margin-right: 12px;
+  font-family: 'InriaSans-Bold', Arial, sans-serif;
+  font-size: 1.35rem;
+}
+
+.config-user-info-value {
+  font-family: 'InriaSans-Regular', Arial, sans-serif;
+  font-size: 1.35rem;
+  color: #fff;
+}

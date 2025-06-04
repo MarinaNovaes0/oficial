@@ -9,7 +9,7 @@ estado_irrigacao = {
 
 # Usuário de teste
 usuarios = {
-    "teste": "1234"  # username: senha
+    "email@gmail.com": "1234"  # e-mail: senha
 }
 
 @app.route('/')
@@ -30,10 +30,9 @@ def desligar():
     estado_irrigacao["agua"] = 0
     return '', 204
 
-
 @app.route('/forgot', methods=['GET'])
 def forgot():
-    return render_template('forgot.html')
+    return render_template('esqueci_a_senha.html')
 
 @app.route('/resetar_senha', methods=['GET'])
 def reset():
@@ -43,6 +42,10 @@ def reset():
 def sent():
     return render_template('sent.html')
 
-@app.route('/app', methods=['GET'])
-def app_page():
-    return render_template('app.html')
+@app.route('/painel_admin', methods=['GET'])
+def painel_admin():
+    return render_template('painel_admin.html')
+
+@app.route('/config', methods=['GET'])
+def config():
+    return render_template('config.html')

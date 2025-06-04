@@ -126,6 +126,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.vscode
 env/
 venv/
 ENV/
@@ -172,5 +173,6 @@ poetry.toml
 
 # LSP config files
 pyrightconfig.json
+
 
 # End of https://www.toptal.com/developers/gitignore/api/python
