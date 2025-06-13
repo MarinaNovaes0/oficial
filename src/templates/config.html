@@ -7,29 +7,29 @@
         <link rel="stylesheet" href="static/css/styleconfig.css"/>
         <title>Configurações - Aquanox</title>
     </head>
-    <body>
+    <body class="config-bg">
         <div class="config-app">
             <div class="config-banner">
                 <img class="config-logo" src="static/img/logo.png" />
             </div>
-            <div class="user-info-bar">Informações do Usuário</div>
             <div class="config-header">
-                <!-- Exibe informações do usuário logado no lugar do ícone -->
                 <div class="config-user-info">
-                    <div class="config-user-info-item">
-                        <span class="config-user-info-label">Nome:</span>
-                        <span class="config-user-info-value">{{ usuario_nome }}</span>
+                    <div class="config-user-info-title">
+                        Sua <span class="config-user-info-title-bold">conta.</span>
                     </div>
-                    <div class="config-user-info-item">
-                        <span class="config-user-info-label">E-mail:</span>
-                        <span class="config-user-info-value">{{ usuario_email }}</span>
+                    <div class="config-user-info-field">
+                        <input type="text" value="{{ usuario_nome }}" disabled class="config-user-input" placeholder="Usuário">
+                        <img src="static/img/user.svg" alt="Usuário" class="config-user-info-icon-input">
                     </div>
-                    <div class="config-user-info-item">
-                        <span class="config-user-info-label">Senha:</span>
-                        <span class="config-user-info-value">{{ usuario_senha }}</span>
+                    <div class="config-user-info-field">
+                        <input type="text" value="{{ usuario_email }}" disabled class="config-user-input" placeholder="E-mail">
+                        <img src="static/img/email.svg" alt="E-mail" class="config-user-info-icon-input">
+                    </div>
+                    <div class="config-user-info-field">
+                        <input type="password" value="{{ usuario_senha }}" disabled class="config-user-input" placeholder="Senha">
+                        <img src="static/img/senha.svg" alt="Senha" class="config-user-info-icon-input">
                     </div>
                 </div>
-                <!-- ...existing code for .config-user-account no-box (remova ou mantenha apenas se necessário) ... -->
             </div>
             <div class="config-title-bar">
                 <div class="config-title-main">Configurações</div>
@@ -42,5 +42,7 @@
                 <button class="config-btn">Salvar Alterações</button>
             </div>
         </div>
+    </body>
+</html>
     </body>
 </html>

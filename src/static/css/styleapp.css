@@ -47,6 +47,9 @@
   position: absolute;
   left: 150px;
   top: 89px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
 }
 .codicon-account {
   flex-shrink: 0;
@@ -1188,4 +1191,32 @@
   display: none !important;
   pointer-events: none !important;
   visibility: hidden !important;
+}
+
+/* Dropdown do usuário no painel admin */
+#userDropdownMenu {
+  min-width: 180px;
+  box-shadow: 0 2px 12px #0002;
+  border-radius: 12px;
+  background: #fff;
+  padding: 8px 0;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  z-index: 1000;
+}
+#userDropdownMenu button {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 12px 24px;
+  font-family: 'Nexa-Heavy',sans-serif;
+  font-size: 16px;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#userDropdownMenu button:hover {
+  background: #f5f7fa;
 }

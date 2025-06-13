@@ -41,8 +41,12 @@
   <body>
     <div class="app">
       <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" />
-      <div class="frame-3">
+      <div class="frame-3" id="userMenuTrigger">
         <img class="codicon-account" src="{{ url_for('static', filename='img/usuario.svg') }}" />
+        <!-- Dropdown do usuário -->
+        <div id="userDropdownMenu" style="display:none; position:absolute; top:80px; left:0; background:#fff; border-radius:12px; box-shadow:0 2px 12px #0002; min-width:180px; z-index:1000; padding:8px 0;">
+          <button id="configOption" style="width:100%; background:none; border:none; text-align:left; padding:12px 24px; font-family:'Nexa-Heavy',sans-serif; font-size:16px; color:#222; cursor:pointer;">Configurações</button>
+        </div>
       </div>
       <div class="ol-usu-rio">
         <span>
@@ -135,6 +139,28 @@
         </span>
       </div>
       <script src="{{ url_for('static', filename='js/painel_admin.js') }}"></script>
+      <script>
+        // Dropdown do usuário
+        const frame3 = document.getElementById('userMenuTrigger');
+        const dropdown = document.getElementById('userDropdownMenu');
+        const configBtn = document.getElementById('configOption');
+        if (frame3 && dropdown && configBtn) {
+          frame3.style.position = 'relative';
+          frame3.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+          });
+          configBtn.addEventListener('click', function(e) {
+            window.location.href = '/config';
+          });
+          // Fecha o dropdown ao clicar fora
+          document.addEventListener('mousedown', function(ev) {
+            if (!frame3.contains(ev.target)) {
+              dropdown.style.display = 'none';
+            }
+          });
+        }
+      </script>
     </div>
   </body>
 </html>
