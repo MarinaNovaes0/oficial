@@ -1,9 +1,50 @@
+
+// Dropdown do usuário
+const frame3 = document.getElementById('userMenuTrigger');
+const dropdown = document.getElementById('userDropdownMenu');
+const configBtn = document.getElementById('configOption');
+if (frame3 && dropdown && configBtn) {
+  frame3.style.position = 'relative';
+  frame3.addEventListener('click', function(e) {
+    e.stopPropagation();
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  });
+  configBtn.addEventListener('click', function(e) {
+    window.location.href = '/config';
+  });
+  // Fecha o dropdown ao clicar fora
+  document.addEventListener('mousedown', function(ev) {
+    if (!frame3.contains(ev.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+}
+
+// Bloqueia zoom por teclado e gestos
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+    e.preventDefault();
+  }
+});
+document.addEventListener('wheel', function(e) {
+  if (e.ctrlKey) e.preventDefault();
+}, { passive: false });
+document.addEventListener('gesturestart', function(e) {
+  e.preventDefault();
+});
+document.addEventListener('gesturechange', function(e) {
+  e.preventDefault();
+});
+document.addEventListener('gestureend', function(e) {
+  e.preventDefault();
+});
+
 // Válvulas
 const container = document.getElementById('valvulasContainer');
 const exemplo = document.getElementById('valvulasExemplo');
 let expanded = false;
 if (container && exemplo) {
-  const header = container.querySelector('.rectangle-32');
+  const header = container.querySelector('.retangulo-32');
   // Remover evento de clique do header
 }
 
@@ -12,7 +53,7 @@ const estacaoContainer = document.getElementById('estacaoContainer');
 const estacaoExemplo = document.getElementById('estacaoExemplo');
 let estacaoExpanded = false;
 if (estacaoContainer && estacaoExemplo) {
-  const header = estacaoContainer.querySelector('.rectangle-32');
+  const header = estacaoContainer.querySelector('.retangulo-32');
   // Remover evento de clique do header
 }
 
@@ -71,7 +112,7 @@ if (estacaoContainer && estacaoExemplo) {
   }
 
   // Remova o helper showWeatherCardsImmediate e ajuste o toggle para não ocultar/mostrar os cards manualmente
-  const header = estacaoContainer.querySelector('.rectangle-32');
+  const header = estacaoContainer.querySelector('.retangulo-32');
   // Remover evento de clique do header
 
   // Função auxiliar para retornar os dados das abas umidade, vento, chuva
@@ -668,12 +709,12 @@ function showValvulaActions(label) {
   const menu = document.createElement('div');
   menu.className = 'valvula-actions-menu';
   menu.innerHTML = `
-    <div class="edit rectangle-36" style="cursor:pointer; left:0;">
+    <div class="edit retangulo-36" style="cursor:pointer; left:0;">
       <div class="mingcute-edit-line">
         <img class="group" src="static/img/edit-outline.svg" />
       </div>
     </div>
-    <div class="delete rectangle-37" style="cursor:pointer; right:0;">
+    <div class="delete retangulo-37" style="cursor:pointer; right:0;">
       <img class="material-symbols-delete-outline" src="static/img/delete-outline.svg" />
     </div>
   `;

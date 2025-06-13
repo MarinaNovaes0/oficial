@@ -114,17 +114,18 @@
   top: 655px;
   left: 50%;
   transform: translateX(-50%);
-  position: absolute;
+  position: relative;
 }
 
 #estacaoContainer {
   top: 745px;
   left: 50%;
   transform: translateX(-50%);
-  position: absolute;
+  position:relative;
+  margin-top:16px;
 }
 
-.rectangle-32 {
+.retangulo-32 {
   background: #ffffff;
   border-radius: 20px 20px 0 0;
   width: 100%;
@@ -144,6 +145,7 @@
   object-fit: cover;
   aspect-ratio: 1;
   position: static;
+  margin-right:8px;
 }
 .valvulas {
   color: #000000;
@@ -203,16 +205,9 @@
   background: #fff;
   z-index: 2;
   margin-top: 8px;
+  margin-right:8px;
 }
 
-/* Estilo para a seção da estação meteorológica */
-.estacao-container {
-  width: 1080px;
-  position: absolute;
-  left: 150px;
-  top: 745px;
-  height: auto;
-}
 .estacao-icon {
   opacity: 0.7;
   width: 50px;
@@ -406,7 +401,7 @@
   left: 227px;
   top: 103px;
 }
-.rectangle-20 {
+.retangulo-20 {
   background: #000000;
   width: 1.69%;
   height: 35.06%;
@@ -416,7 +411,7 @@
   bottom: 28.35%;
   top: 36.59%;
 }
-.rectangle-21 {
+.retangulo-21 {
   background: #000000;
   width: 1.69%;
   height: 35.06%;
@@ -426,7 +421,7 @@
   bottom: 28.35%;
   top: 36.59%;
 }
-.rectangle-18 {
+.retangulo-18 {
   background: #000000;
   width: 1.69%;
   height: 10.98%;
@@ -436,7 +431,7 @@
   bottom: 48.17%;
   top: 40.85%;
 }
-.rectangle-19 {
+.retangulo-19 {
   background: #000000;
   width: 1.69%;
   height: 10.98%;
@@ -791,15 +786,15 @@
   /* Remove left/right for better alignment */
 }
 
-.valvula-actions-menu .edit .rectangle-36,
-.valvula-actions-menu .delete .rectangle-37 {
+.valvula-actions-menu .edit .retangulo-36,
+.valvula-actions-menu .delete .retangulo-37 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.rectangle-36,
-.rectangle-37 {
+.retangulo-36,
+.retangulo-37 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -810,11 +805,11 @@
   z-index: 0;
 }
 
-.rectangle-36 {
+.retangulo-36 {
   background: #e0e7ef;
 }
 
-.rectangle-37 {
+.retangulo-37 {
   background: #ffeaea;
 }
 
@@ -887,34 +882,6 @@
   box-sizing: border-box;
 }
 
-/* Estilo para a seção da estação meteorológica */
-.estacao-container {
-  width: 1080px;
-  position: absolute;
-  left: 150px;
-  top: 745px;
-  height: auto;
-}
-.estacao-icon {
-  opacity: 0.7;
-  width: 50px;
-  height: 50px;
-  margin-left: 24px;
-  object-fit: cover;
-  aspect-ratio: 1;
-  position: static;
-}
-.estacao-label {
-  color: #000000;
-  text-align: left;
-  font-family: 'Nexa-Heavy', Arial, sans-serif;
-  font-size: 24px;
-  line-height: 85.78%;
-  font-weight: bold;
-  margin-left: 24px;
-  flex: 1;
-  position: static;
-}
 .estacao-exemplo {
   display: none;
   background: #fff;
@@ -1146,7 +1113,11 @@
   margin-bottom: 18px;
   margin-top: 0;
   gap: 8px;
+  font-family: 'Nexa-Heavy', sans-serif;
+  font-size: 16px;
+  margin-right: 8px;
 }
+
 .weather-period-select select {
   font-family: 'Nexa-Heavy', sans-serif;
   font-size: 16px;
@@ -1184,6 +1155,18 @@
   transition: none !important;
 }
 
+.configOption{
+  width:100%;
+  background:none;
+  border:none;
+  text-align:left;
+  padding:12px 24px;
+  font-family:'Nexa-Heavy',sans-serif;
+  font-size:16px;
+  color:#222;
+  cursor:pointer;
+}
+
 /* Remova a seta de toggle das caixas (se houver) */
 .vector,
 #valvulasToggle,
@@ -1204,6 +1187,7 @@
   left: 0;
   top: 80px;
   z-index: 1000;
+  display:none;
 }
 #userDropdownMenu button {
   width: 100%;
@@ -1219,4 +1203,32 @@
 }
 #userDropdownMenu button:hover {
   background: #f5f7fa;
+}
+
+/* CSS migrado do painel_admin.html */
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+menu,
+ol,
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

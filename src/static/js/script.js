@@ -1,3 +1,54 @@
+
+// Adiciona a classe 'show' após o carregamento da página para disparar a animação
+window.onload = function() {
+document.getElementById('sentBox').classList.add('show');
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const btnEntrar = document.querySelector('.btn-entrar');
+  if (btnEntrar) {
+    btnEntrar.addEventListener('click', function(e) {
+      e.preventDefault();
+      const username = document.querySelector('input[name="username"]').value.trim();
+      const password = document.querySelector('input[name="password"]').value.trim();
+      if (!username || !password) {
+        alert('Por favor, preencha todos os campos!');
+        return;
+      }
+      // Mostra modal de confirmação
+      document.getElementById('cadastroConfirmModal').style.display = 'flex';
+      document.getElementById('btnIrPainel').onclick = function() {
+        window.location.href = '/painel_admin';
+      };
+    });
+  }
+  // Lógica para o botão "Voltar ao topo"
+  const btnVoltarTopo = document.getElementById('btnVoltarTopo');
+  btnVoltarTopo.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+// Bloqueia zoom por teclado e gestos
+document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+        e.preventDefault();
+    }
+});
+document.addEventListener('wheel', function(e) {
+    if (e.ctrlKey) e.preventDefault();
+}, { passive: false });
+document.addEventListener('gesturestart', function(e) {
+    e.preventDefault();
+});
+document.addEventListener('gesturechange', function(e) {
+    e.preventDefault();
+});
+document.addEventListener('gestureend', function(e) {
+    e.preventDefault();
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   // Navegação suave para as seções do header
   document.querySelectorAll('nav a').forEach(anchor => {
@@ -5,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const href = this.getAttribute('href');
       if (href === '#sobre') {
         e.preventDefault();
-        const sobreSection = document.querySelector('.rectangle-7');
+        const sobreSection = document.querySelector('.retangulo-7');
         if (sobreSection) {
           window.scrollTo({
             top: sobreSection.offsetTop - 20,
@@ -14,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       } else if (href === '#funcoes') {
         e.preventDefault();
-        const funcoesSection = document.querySelector('.rectangle-8');
+        const funcoesSection = document.querySelector('.retangulo-8');
         if (funcoesSection) {
           window.scrollTo({
             top: funcoesSection.offsetTop - 20,
@@ -23,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       } else if (href === '#faq') {
         e.preventDefault();
-        const faqSection = document.querySelector('.rectangle-9');
+        const faqSection = document.querySelector('.retangulo-9');
         if (faqSection) {
           window.scrollTo({
             top: faqSection.offsetTop - 20,
@@ -219,8 +270,8 @@ if (forgotForm) {
       togglePassword.style.cursor = 'pointer';
   }
 
-  // Animação dos rectangles verdes com gradiente fluido via JS
-  function addRectangleHoverAnimation(selector) {
+  // Animação dos retangulos verdes com gradiente fluido via JS
+  function addretanguloHoverAnimation(selector) {
     document.querySelectorAll(selector).forEach(function(rect) {
       rect.addEventListener('mouseenter', function() {
         rect.classList.add('hover');
@@ -238,8 +289,8 @@ if (forgotForm) {
       });
     });
   }
-  addRectangleHoverAnimation('.rectangle-14');
-  addRectangleHoverAnimation('.rectangle-14-invertida');
+  addretanguloHoverAnimation('.retangulo-14');
+  addretanguloHoverAnimation('.retangulo-14-invertida');
 
   // Expansão da caixa ao clicar na seta
   const seta = document.getElementById('abrirExpansivel');
@@ -265,7 +316,7 @@ if (forgotForm) {
   if (fimSobre) {
     fimSobre.addEventListener('click', function(e) {
       e.preventDefault();
-      const sobreSection = document.querySelector('.rectangle-7');
+      const sobreSection = document.querySelector('.retangulo-7');
       if (sobreSection) {
         window.scrollTo({
           top: sobreSection.offsetTop - 20,
@@ -280,7 +331,7 @@ if (forgotForm) {
   if (fimFuncoes) {
     fimFuncoes.addEventListener('click', function(e) {
       e.preventDefault();
-      const funcoesSection = document.querySelector('.rectangle-8');
+      const funcoesSection = document.querySelector('.retangulo-8');
       if (funcoesSection) {
         window.scrollTo({
           top: funcoesSection.offsetTop - 20,
@@ -295,7 +346,7 @@ if (forgotForm) {
   if (fimFaq) {
     fimFaq.addEventListener('click', function(e) {
       e.preventDefault();
-      const faqSection = document.querySelector('.rectangle-9');
+      const faqSection = document.querySelector('.retangulo-9');
       if (faqSection) {
         window.scrollTo({
           top: faqSection.offsetTop - 20,
@@ -379,10 +430,10 @@ if (forgotForm) {
 
 // Expansão das caixas ao clicar nas setas (FAQ) - só permite uma aberta por vez
 function setupExpansiveis() {
-  const faq1 = document.querySelector('.rectangle-162-1');
-  const faq2 = document.querySelector('.rectangle-162-2');
-  const faq3 = document.querySelector('.rectangle-162-3');
-  const faq4 = document.querySelector('.rectangle-162-4');
+  const faq1 = document.querySelector('.retangulo-162-1');
+  const faq2 = document.querySelector('.retangulo-162-2');
+  const faq3 = document.querySelector('.retangulo-162-3');
+  const faq4 = document.querySelector('.retangulo-162-4');
   const GAP = 40;
 
   // Inicializa todos mais para cima

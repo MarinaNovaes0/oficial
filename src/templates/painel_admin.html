@@ -6,36 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/varsapp.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styleapp.css') }}" />
-
-    <style>
-      a,
-      button,
-      input,
-      select,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        border: none;
-        text-decoration: none;
-        background: none;
-
-        -webkit-font-smoothing: antialiased;
-      }
-
-      menu,
-      ol,
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
     <title>Painel Administrativo - Aquanox</title>
   </head>
   <body>
@@ -44,8 +14,8 @@
       <div class="frame-3" id="userMenuTrigger">
         <img class="codicon-account" src="{{ url_for('static', filename='img/usuario.svg') }}" />
         <!-- Dropdown do usuário -->
-        <div id="userDropdownMenu" style="display:none; position:absolute; top:80px; left:0; background:#fff; border-radius:12px; box-shadow:0 2px 12px #0002; min-width:180px; z-index:1000; padding:8px 0;">
-          <button id="configOption" style="width:100%; background:none; border:none; text-align:left; padding:12px 24px; font-family:'Nexa-Heavy',sans-serif; font-size:16px; color:#222; cursor:pointer;">Configurações</button>
+        <div id="userDropdownMenu">
+          <button id="configOption">Configurações</button>
         </div>
       </div>
       <div class="ol-usu-rio">
@@ -57,25 +27,25 @@
       <div class="frame-5">
         <div class="funcoes">Funções</div>
       </div>
-      <div class="valvulas-container" id="valvulasContainer" style="position:relative;">
-        <div class="rectangle-32" style="display:flex; align-items:center; position:relative;">
-          <img class="valve-3" src="{{ url_for('static', filename='img/valvula.png') }}" style="margin-right:8px;" />
-          <div class="valvulas" style="flex:1;">Válvulas</div>
+      <div class="valvulas-container" id="valvulasContainer">
+        <div class="retangulo-32">
+          <img class="valve-3" src="{{ url_for('static', filename='img/valvula.png') }}" />
+          <div class="valvulas">Válvulas</div>
           <img class="vector" id="valvulasToggle" src="{{ url_for('static', filename='img/seta1.svg') }}" />
         </div>
         <span class="valvulas-exemplo" id="valvulasExemplo">
           <div class="assets" id="valvulasAssets">
             <div class="frame-4" id="addValvulaBox">
-              <div class="adicionar-valvula" id="adicionarValvula" style="cursor:pointer;">Adicionar Válvula</div>
+              <div class="adicionar-valvula" id="adicionarValvula">Adicionar Válvula</div>
             </div>
             <!-- As .valvulas-row serão inseridas via JS após o frame-4 -->
           </div>
         </span>
       </div>
-      <div class="estacao-container" id="estacaoContainer" style="position:relative; margin-top:16px;">
-        <div class="rectangle-32" style="display:flex; align-items:center; position:relative;">
-          <img class="estacao-icon" src="{{ url_for('static', filename='img/climatologia.png') }}" style="margin-right:8px;" />
-          <div class="estacao-label" style="flex:1;">Estação Meteorológica</div>
+      <div class="estacao-container" id="estacaoContainer">
+        <div class="retangulo-32">
+          <img class="estacao-icon" src="{{ url_for('static', filename='img/climatologia.png') }}" />
+          <div class="estacao-label">Estação Meteorológica</div>
           <img class="vector" id="estacaoToggle" src="{{ url_for('static', filename='img/seta2.svg') }}" />
         </div>
         <span class="estacao-exemplo" id="estacaoExemplo">
@@ -107,7 +77,7 @@
             </div>
           </div>
           <div class="weather-period-select">
-            <label for="weatherPeriod" style="font-family:'Nexa-Heavy',sans-serif;font-size:16px;margin-right:8px;">Intervalo:</label>
+            <label for="weatherPeriod">Intervalo:</label>
             <select id="weatherPeriod">
               <option value="24h">Últimas 24h</option>
               <option value="semana">Última semana</option>
@@ -125,42 +95,22 @@
           </div>
           <div class="weather-extra" id="weatherExtra">
             <!-- Conteúdo extra das abas Umidade, Vento, Chuva -->
+
             <!-- Exemplo: Umidade -->
-            <div class="weather-extra-content" id="weatherExtraUmidade" style="display:none;">
+            <div class="weather-extra-content" id="weatherExtraUmidade">
               <div class="weather-extra-value" id="weatherHumidityBox">Umidade: 53%</div>
             </div>
-            <div class="weather-extra-content" id="weatherExtraVento" style="display:none;">
+            <div class="weather-extra-content" id="weatherExtraVento">
               <div class="weather-extra-value" id="weatherWindBox">Vento: 12 km/h</div>
             </div>
-            <div class="weather-extra-content" id="weatherExtraChuva" style="display:none;">
+            <div class="weather-extra-content" id="weatherExtraChuva">
               <div class="weather-extra-value" id="weatherRainBox">Chuva: 0%</div>
             </div>
           </div>
         </span>
       </div>
       <script src="{{ url_for('static', filename='js/painel_admin.js') }}"></script>
-      <script>
-        // Dropdown do usuário
-        const frame3 = document.getElementById('userMenuTrigger');
-        const dropdown = document.getElementById('userDropdownMenu');
-        const configBtn = document.getElementById('configOption');
-        if (frame3 && dropdown && configBtn) {
-          frame3.style.position = 'relative';
-          frame3.addEventListener('click', function(e) {
-            e.stopPropagation();
-            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-          });
-          configBtn.addEventListener('click', function(e) {
-            window.location.href = '/config';
-          });
-          // Fecha o dropdown ao clicar fora
-          document.addEventListener('mousedown', function(ev) {
-            if (!frame3.contains(ev.target)) {
-              dropdown.style.display = 'none';
-            }
-          });
-        }
-      </script>
     </div>
   </body>
 </html>
+         
